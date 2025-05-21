@@ -2,11 +2,10 @@ name: Deploy React to Hostinger via FTP
 
 on:
   push:
-    branches: [main, master]
-  pull_request:
-    branches: [main, master]
+    branches:
+      - master
 
-jjobs:
+jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
