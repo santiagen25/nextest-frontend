@@ -5,7 +5,7 @@ import AuthLayout from '../components/AuthLayout';
 export default function Login() {
 	const [userId, setUserId] = useState('');
 	const [password, setPassword] = useState('');
-	const [confirmPassword, setConfirmPassword] = useState('');
+	const [confirmPassword] = useState('');
 	const [error, setError] = useState('');
 	const [success, setSuccess] = useState(false);
 

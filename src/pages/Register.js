@@ -3,9 +3,9 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import AuthLayout from '../components/AuthLayout';
 
 export default function Register() {
-	const [userId, setUserId] = useState('');
-	const [password, setPassword] = useState('');
-	const [confirmPassword, setConfirmPassword] = useState('');
+	const [userId] = useState('');
+	const [password] = useState('');
+	const [confirmPassword] = useState('');
 	const [error, setError] = useState('');
 	const [success, setSuccess] = useState(false);
 

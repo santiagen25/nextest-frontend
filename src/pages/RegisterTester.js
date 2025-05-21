@@ -17,16 +17,7 @@ export default function RegisterTester() {
 		herramientas: '',
 		lenguajes: '',
 	});
-
-	const toggleIdioma = (idioma) => {
-		setForm((prev) => ({
-			...prev,
-			idiomas: prev.idiomas.includes(idioma)
-				? prev.idiomas.filter((i) => i !== idioma)
-				: [...prev.idiomas, idioma],
-		}));
-	};
-
+	
 	const toggleInteres = (interes) => {
 		setForm((prev) => ({
 			...prev,
@@ -51,7 +42,6 @@ export default function RegisterTester() {
 		console.log('Tester registrado:', form);
 	};
 
-	const idiomasDisponibles = ['Español', 'Inglés', 'Francés'];
 	const intereses = [
 		'Testing manual y exploratorio',
 		'Testing automatizado',
