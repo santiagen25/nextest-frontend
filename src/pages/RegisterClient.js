@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { registerClient } from '../services/authService';
+import AuthLayout from '../components/AuthLayout';
 
 export default function RegisterClient() {
   const [step, setStep] = useState(1);
@@ -30,11 +31,7 @@ export default function RegisterClient() {
 
   return (
     <div class="d-flex vh-100">
-        <div class="w-50 align-items-center justify-content-center bg-dark">
-            <div className="container no-boxShadow bg-dark d-flex justify-content-center">
-                <h1 class="text-white">nextest.io</h1>
-            </div>
-        </div>
+        <AuthLayout />
         <div class="w-50 align-items-center justify-content-center">
             <div class="container px-5">
                 <div class="mb-5">

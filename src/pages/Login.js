@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import AuthLayout from '../components/AuthLayout';
 
-export default function Register() {
+export default function Login() {
 	const [userId, setUserId] = useState('');
 	const [password, setPassword] = useState('');
 	const [confirmPassword, setConfirmPassword] = useState('');
@@ -54,30 +54,57 @@ export default function Register() {
 					</div>
 					<div>
 						<form onSubmit={handleSubmit}>
-							<h4>About yourself...</h4>
+							<h4>Accede a tu cuenta</h4>
+
 							<div>
-								<p>First name:</p>
-								<input name="name" placeholder="name..." required />
-							</div>
-							<div>
-								<p>Last name:</p>
-								<input name="lastName" placeholder="last name..." required />
-							</div>
-							<div>
-								<p>email:</p>
-								<input name="email" placeholder="email..." required />
-							</div>
-							<div className="d-flex justify-content-center mt-3">
-								<ReCAPTCHA
-									sitekey="TU_SITE_KEY"
-									onChange={handleChange}
-									ref={recaptchaRef}
+								<label>Email:</label>
+								<input
+								type="email"
+								name="email"
+								required
+								value={userId}
+								onChange={(e) => setUserId(e.target.value)}
 								/>
 							</div>
-							<div class="d-flex justify-content-end mt-5">
-								<button type="submit">Next</button>
+
+							<div>
+								<label>Contraseña:</label>
+								<input
+								type="password"
+								name="password"
+								required
+								value={password}
+								onChange={(e) => setPassword(e.target.value)}
+								/>
 							</div>
+
+							<div>
+								<input
+								type="checkbox"
+								id="remember"
+								/>
+								<label htmlFor="remember">Recordar mi sesión</label>
+							</div>
+
+							<div>
+								<a href="/recuperar-cuenta">¿Has olvidado tu contraseña?</a>
+							</div>
+
+							<div className="d-flex justify-content-center mt-3">
+								<ReCAPTCHA
+								sitekey="TU_SITE_KEY"
+								onChange={handleChange}
+								ref={recaptchaRef}
+								/>
+							</div>
+
+							<div className="d-flex justify-content-end mt-4">
+								<button type="submit">Entrar</button>
+							</div>
+
+							{error && <p style={{ color: 'red' }}>{error}</p>}
 						</form>
+
 						{error && <p style={{ color: 'red' }}>{error}</p>}
 						{success && <p style={{ color: 'green' }}>¡Cuenta creada con éxito!</p>}
 					</div>

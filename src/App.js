@@ -4,6 +4,8 @@ import RegisterClient from './pages/RegisterClient';
 import RegisterTester from './pages/RegisterTester';
 import Register from './pages/Register';
 import './App.css';
+import Login from './pages/Login';
+import RecoverAccount from './pages/RecoverAccount';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path="/alta-cliente" element={<RegisterClient />} />
         <Route path="/alta-tester" element={<RegisterTester />} />
         <Route path="/crear-cuenta" element={<Register />} />
+		<Route path="/login" element={<Login />} />
+		<Route path="/recuperar-cuenta" element={<RecoverAccount />} />
         <Route path="*" element={<p>404</p>} />
       </Routes>
     </Router>
