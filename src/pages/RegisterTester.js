@@ -27,6 +27,8 @@ export default function RegisterTester() {
 		}));
 	};
 
+	console.log("")
+
 	const handleChange = (e) => {
 		setForm({ ...form, [e.target.name]: e.target.value });
 	};
