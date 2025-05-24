@@ -11,12 +11,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Register />} />
-        <Route path="/alta-cliente" element={<RegisterClient />} />
-        <Route path="/alta-tester" element={<RegisterTester />} />
-        <Route path="/crear-cuenta" element={<Register />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/register-client" element={<RegisterClient />} />
+        <Route path="/register-tester" element={<RegisterTester />} />
+        <Route path="/register" element={<Register />} />
 		<Route path="/login" element={<Login />} />
-		<Route path="/recuperar-cuenta" element={<RecoverAccount />} />
+		<Route path="/reset-password" element={<RecoverAccount />} />
         <Route path="*" element={<p>404</p>} />
       </Routes>
     </Router>

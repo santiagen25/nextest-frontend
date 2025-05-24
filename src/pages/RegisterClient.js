@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { registerClient } from '../services/authService';
 import AuthLayout from '../components/AuthLayout';
+import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
 
 export default function RegisterClient() {
   const [step, setStep] = useState(1);
@@ -34,12 +35,17 @@ export default function RegisterClient() {
         <AuthLayout />
         <div class="w-50 align-items-center justify-content-center">
             <div class="container px-5">
-                <div class="mb-5">
-                    <p class="text-end">
-                        Already have an account?
-                        <a href="/login" class="ms-2 text-dark fw-bold">Sign In</a>
-                    </p>
-                </div>
+				<LinkInLoginsRegisters
+					text="Are you a Tester?"
+					url="/register-tester"
+					linkText="Register as Tester"
+					isLast={false}
+				/>
+				<LinkInLoginsRegisters
+					text="Already have an account?"
+					url="/login"
+					linkText="Login"
+				/>
                 <div>
                     <h3 class="fw-bold fs-2 text-center mb-5">You're starting something new, let's make it a way of life ;-)</h3>
                 </div>

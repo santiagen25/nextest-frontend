@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import AuthLayout from '../components/AuthLayout';
+import { login } from '../services/authService';
+import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
 
 export default function Login() {
 	const [userId, setUserId] = useState('');
 	const [password, setPassword] = useState('');
-	const [confirmPassword] = useState('');
+	const [rememberMe, setRememberMe] = useState('');
 	const [error, setError] = useState('');
 	const [success, setSuccess] = useState(false);
+
+	function AboutPage() {
+		useEffect(() => {
+		document.title = "Login - Nextest";
+		}, []);
+	
+		return <h1>About</h1>;
+	}	
 
 	const recaptchaRef = React.useRef();
 
@@ -16,26 +26,28 @@ export default function Login() {
 		// Envíalo a tu backend para verificación
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setError('');
 		setSuccess(false);
-
-		if (!/^[a-zA-Z0-9]+$/.test(userId)) {
-			return setError('La ID solo puede contener letras y números');
+	
+		if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userId)) {
+			return setError('Introduce un correo electrónico válido');
 		}
 
-		if (password !== confirmPassword) {
-			return setError('Las contraseñas no coinciden');
+		const objectToSend = {
+			email: userId,
+			password: password
 		}
-
-		if (password.length < 8) {
-			return setError('La contraseña debe tener al menos 8 caracteres');
+	
+		try {
+			const result = await login(objectToSend);
+			console.log('Login OK:', result);
+			setSuccess(true);
+			// Aquí podrías redirigir o guardar el token
+		} catch (err) {
+			setError(err.message);
 		}
-
-		// Aquí iría lógica CAPTCHA, rate limiting, email confirm, etc.
-		console.log('Cuenta creada:', { userId, password });
-		setSuccess(true);
 	};
 
 	return (
@@ -43,12 +55,11 @@ export default function Login() {
 			<AuthLayout />
 			<div class="w-50 align-items-center justify-content-center">
 				<div class="container px-5">
-					<div class="mb-5">
-						<p class="text-end">
-							Already have an account?
-							<a href="/login" class="ms-2 text-dark fw-bold">Sign In</a>
-						</p>
-					</div>
+					<LinkInLoginsRegisters
+						text="Don't have an account?" 
+						url="/register-client" 
+						linkText="Register" 
+					/>
 					<div>
 						<h3 class="fw-bold fs-2 text-center mb-5">You're starting something new, let's make it a way of life ;-)</h3>
 					</div>
@@ -78,17 +89,20 @@ export default function Login() {
 								/>
 							</div>
 
-							<div>
+							<div class="d-flex align-items-center gap-2 mt-3">
 								<input
 								type="checkbox"
 								id="remember"
+								value={rememberMe}
 								/>
 								<label htmlFor="remember">Recordar mi sesión</label>
 							</div>
 
-							<div>
-								<a href="/recuperar-cuenta">¿Has olvidado tu contraseña?</a>
-							</div>
+							<LinkInLoginsRegisters
+								text="Have you forgoten your password?"
+								url="/reset-password"
+								linkText="Reset Password"
+							/>
 
 							<div className="d-flex justify-content-center mt-3">
 								<ReCAPTCHA

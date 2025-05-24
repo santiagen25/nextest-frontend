@@ -1,10 +1,6 @@
-// authService.js
-import axios from 'axios';
+import { apiFuncional, apiLogin } from './api';
 
-export const registerClient = (data) => {
-  return axios.post('/api/register/client', data);
-};
-
-export const registerTester = (data) => {
-  return axios.post('/api/register/tester', data);
-};
+export const login = (data) => apiLogin.post('/login', data);
+export const registerClient = (data) => apiFuncional.post('/customers', data);
+export const registerTester = (data) => apiFuncional.post('/testers', data);
+	

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import AuthLayout from '../components/AuthLayout';
+import { registerTester } from '../services/authService';
+import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
 
 export default function RegisterTester() {
 	const [step, setStep] = useState(1);
@@ -17,6 +19,8 @@ export default function RegisterTester() {
 		herramientas: '',
 		lenguajes: '',
 	});
+	const [error, setError] = useState('');
+	const [success, setSuccess] = useState(false);
 	
 	const toggleInteres = (interes) => {
 		setForm((prev) => ({
@@ -36,12 +40,27 @@ export default function RegisterTester() {
 	const nextStep = () => setStep(step + 1);
 	const prevStep = () => setStep(step - 1);
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		if (new Date(form.nacimiento) > new Date(Date.now() - 568025136000)) {
 			return alert('Debes tener al menos 18 años.');
 		}
 		console.log('Tester registrado:', form);
+
+		const objectToSend = {
+			email: form.email,
+			password: form.password,
+			experience: undefined
+		}
+	
+		try {
+			const result = await registerTester(objectToSend);
+			console.log('Login OK:', result);
+			setSuccess(true);
+			// Aquí podrías redirigir o guardar el token
+		} catch (err) {
+			setError(err.message);
+		}
 	};
 
 	const intereses = [
@@ -61,12 +80,17 @@ export default function RegisterTester() {
 			<AuthLayout />
 			<div className="w-50 align-items-center justify-content-center">
 				<div className="container px-5">
-					<div className="mb-5">
-						<p className="text-end">
-							Already have an account?
-							<a href="/login" className="ms-2 text-dark fw-bold">Sign In</a>
-						</p>
-					</div>
+					<LinkInLoginsRegisters
+						text="Are you a Client?"
+						url="/register-client"
+						linkText="Register as Client"
+						isLast={false}
+					/>
+					<LinkInLoginsRegisters
+						text="Already have an account?"
+						url="/login"
+						linkText="Login"
+					/>
 					<div>
 						<h3 className="fw-bold fs-2 text-center mb-5">You're starting something new, let's make it a way of life ;-)</h3>
 					</div>
