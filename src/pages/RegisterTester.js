@@ -19,8 +19,8 @@ export default function RegisterTester() {
 		herramientas: '',
 		lenguajes: '',
 	});
-	const [error, setError] = useState('');
-	const [success, setSuccess] = useState(false);
+	const [setError] = useState('');
+	const [setSuccess] = useState(false);
 	
 	const toggleInteres = (interes) => {
 		setForm((prev) => ({
@@ -84,12 +84,13 @@ export default function RegisterTester() {
 						text="Are you a Client?"
 						url="/register-client"
 						linkText="Register as Client"
-						isLast={false}
+						classParent={""}
 					/>
 					<LinkInLoginsRegisters
 						text="Already have an account?"
 						url="/login"
 						linkText="Login"
+						classParent={"mb-5"}
 					/>
 					<div>
 						<h3 className="fw-bold fs-2 text-center mb-5">You're starting something new, let's make it a way of life ;-)</h3>

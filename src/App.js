@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import './App.css';
 import Login from './pages/Login';
 import RecoverAccount from './pages/RecoverAccount';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/register" element={<Register />} />
 		<Route path="/login" element={<Login />} />
 		<Route path="/reset-password" element={<RecoverAccount />} />
+		<Route path="/dashboard" element={<Dashboard />} />
         <Route path="*" element={<p>404</p>} />
       </Routes>
     </Router>

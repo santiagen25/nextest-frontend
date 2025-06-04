@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import AuthLayout from '../components/AuthLayout';
 import { login } from '../services/authService';
 import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
 	const [userId, setUserId] = useState('');
@@ -10,14 +11,7 @@ export default function Login() {
 	const [rememberMe, setRememberMe] = useState('');
 	const [error, setError] = useState('');
 	const [success, setSuccess] = useState(false);
-
-	function AboutPage() {
-		useEffect(() => {
-		document.title = "Login - Nextest";
-		}, []);
-	
-		return <h1>About</h1>;
-	}	
+	const navigate = useNavigate();
 
 	const recaptchaRef = React.useRef();
 
@@ -45,6 +39,7 @@ export default function Login() {
 			console.log('Login OK:', result);
 			setSuccess(true);
 			// Aquí podrías redirigir o guardar el token
+			navigate('/dashboard');
 		} catch (err) {
 			setError(err.message);
 		}
@@ -58,7 +53,8 @@ export default function Login() {
 					<LinkInLoginsRegisters
 						text="Don't have an account?" 
 						url="/register-client" 
-						linkText="Register" 
+						linkText="Register"
+						classParent={"mb-5"}
 					/>
 					<div>
 						<h3 class="fw-bold fs-2 text-center mb-5">You're starting something new, let's make it a way of life ;-)</h3>
@@ -89,19 +85,24 @@ export default function Login() {
 								/>
 							</div>
 
-							<div class="d-flex align-items-center gap-2 mt-3">
+							<div className="d-flex justify-content-center form-check mt-4">
 								<input
-								type="checkbox"
-								id="remember"
-								value={rememberMe}
+									className="form-check-input"
+									type="checkbox"
+									id="remember"
+									checked={rememberMe}
+									onChange={(e) => setRememberMe(e.target.checked)}
 								/>
-								<label htmlFor="remember">Recordar mi sesión</label>
+								<label className="form-check-label" htmlFor="remember">
+									Recordar mi sesión
+								</label>
 							</div>
 
 							<LinkInLoginsRegisters
 								text="Have you forgoten your password?"
 								url="/reset-password"
 								linkText="Reset Password"
+								classParent={"mb-5 mt-4 d-flex justify-content-center"}
 							/>
 
 							<div className="d-flex justify-content-center mt-3">

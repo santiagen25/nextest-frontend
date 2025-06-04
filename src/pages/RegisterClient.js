@@ -39,12 +39,13 @@ export default function RegisterClient() {
 					text="Are you a Tester?"
 					url="/register-tester"
 					linkText="Register as Tester"
-					isLast={false}
+					classParent={""}
 				/>
 				<LinkInLoginsRegisters
 					text="Already have an account?"
 					url="/login"
 					linkText="Login"
+					classParent={"mb-5"}
 				/>
                 <div>
                     <h3 class="fw-bold fs-2 text-center mb-5">You're starting something new, let's make it a way of life ;-)</h3>
