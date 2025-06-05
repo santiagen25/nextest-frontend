@@ -1,0 +1,14 @@
+{
+	"welcome": "Welcome",
+	"logout": "Log out",
+	"login": {
+		"yourestarting": "You're starting something new, let's make it a way of life ;-)",
+		"accedeatucuenta": "Login into your account",
+		"email": "Email",
+		"passwd": "Password",
+		"recordarme": "Remember me",
+		"entrar": "Log in",
+		"passwdOlvidada": "Have you forgoten your password?",
+		"noTienesCuenta?": "Don't have an account?"
+	}
+}

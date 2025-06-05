@@ -1,0 +1,14 @@
+{
+	"welcome": "Bienvenido",
+	"logout": "Cerrar sesión",
+	"login": {
+		"yourestarting": "Estás empezando algo nuevo, hagámoslo parte de tu estilo de vida ;-)",
+		"accedeatucuenta": "Accede a tu cuenta",
+		"email": "Email",
+		"passwd": "Contraseña",
+		"recordarme": "Recordarme",
+		"entrar": "Entrar",
+		"passwdOlvidada": "¿Has olvidado tu contraseña?",
+		"noTienesCuenta?": "¿No tienes cuenta?"
+	}
+}

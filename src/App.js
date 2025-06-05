@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import RecoverAccount from './pages/RecoverAccount';
 import Dashboard from './pages/Dashboard';
 import PrivateRoute from './components/PrivateRoute';
+import './i18n';
 
 function App() {
   return (
