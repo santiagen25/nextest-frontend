@@ -7,6 +7,7 @@ import './App.css';
 import Login from './pages/Login';
 import RecoverAccount from './pages/RecoverAccount';
 import Dashboard from './pages/Dashboard';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
@@ -18,7 +19,12 @@ function App() {
         <Route path="/register" element={<Register />} />
 		<Route path="/login" element={<Login />} />
 		<Route path="/reset-password" element={<RecoverAccount />} />
-		<Route path="/dashboard" element={<Dashboard />} />
+		<Route path="/dashboard-not" element={<Dashboard />} />
+		<Route path="/dashboard" element={
+			<PrivateRoute>
+				<Dashboard />
+			</PrivateRoute>
+		} />
         <Route path="*" element={<p>404</p>} />
       </Routes>
     </Router>

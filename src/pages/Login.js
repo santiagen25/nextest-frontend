@@ -37,8 +37,8 @@ export default function Login() {
 		try {
 			const result = await login(objectToSend);
 			console.log('Login OK:', result);
+			localStorage.setItem('token', result.token);
 			setSuccess(true);
-			// Aquí podrías redirigir o guardar el token
 			navigate('/dashboard');
 		} catch (err) {
 			setError(err.message);
@@ -107,7 +107,7 @@ export default function Login() {
 
 							<div className="d-flex justify-content-center mt-3">
 								<ReCAPTCHA
-								sitekey="TU_SITE_KEY"
+								sitekey="6Lf3oVYrAAAAAI_3x9XKqK9wvmxhmx-nIWbhAev2"
 								onChange={handleChange}
 								ref={recaptchaRef}
 								/>
