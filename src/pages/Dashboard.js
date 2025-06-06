@@ -20,8 +20,9 @@ export default function Dashboard() {
 			</div>
 
 			<div>
-				<button onClick={() => i18n.changeLanguage('en')}>English</button>
-				<button onClick={() => i18n.changeLanguage('es')}>Español</button>
+				<button onClick={() => i18n.changeLanguage('en')}>{t('general.ingles')}</button>
+				<button onClick={() => i18n.changeLanguage('es')}>{t('general.español')}</button>
+				<button onClick={() => i18n.changeLanguage('ca')}>{t('general.catalan')}</button>
 			</div>
 		</div>
 	);

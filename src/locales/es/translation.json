@@ -1,6 +1,11 @@
 {
 	"welcome": "Bienvenido",
 	"logout": "Cerrar sesión",
+	"general": {
+		"ingles": "Inglés",
+		"español": "Español",
+		"catalan": "Catalán"
+	},
 	"login": {
 		"yourestarting": "Estás empezando algo nuevo, hagámoslo parte de tu estilo de vida ;-)",
 		"accedeatucuenta": "Accede a tu cuenta",
