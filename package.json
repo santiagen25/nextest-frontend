@@ -23,7 +23,7 @@
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "deploy": "sh scripts/deploy.sh",
-	"empty-commit": "sh scripts/empty-commit.sh"
+	"commit": "sh scripts/commit.sh"
   },
   "eslintConfig": {
     "extends": [
