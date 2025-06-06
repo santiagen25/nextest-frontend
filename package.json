@@ -22,7 +22,8 @@
     "build": "CI=false react-scripts build && cp .htaccess build/",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "deploy": "sh scripts/deploy.sh"
+    "deploy": "sh scripts/deploy.sh",
+	"empty-commit": "sh scripts/empty-commit.sh"
   },
   "eslintConfig": {
     "extends": [
