@@ -4,10 +4,10 @@
 	"general": {
 		"ingles": "Inglés",
 		"español": "Español",
-		"catalan": "Catalán"
+		"catalan": "Catalán",
+		"yourestarting": "Estás empezando algo nuevo, hagámoslo parte de tu estilo de vida ;-)"
 	},
 	"login": {
-		"yourestarting": "Estás empezando algo nuevo, hagámoslo parte de tu estilo de vida ;-)",
 		"accedeatucuenta": "Accede a tu cuenta",
 		"email": "Email",
 		"passwd": "Contraseña",
@@ -20,9 +20,30 @@
 	},
 	"recoverAccount": {
 		"tituloRecuperar": "Recuperar contraseña",
-		"introduceEmail": "Introduce tu email"
+		"introduceEmail": "Introduce tu email",
+		"enviarEnlace": "Enviar enlace",
+		"teHemosEnviadoUnEnlace": "Te hemos enviado un enlace de recuperación al correo.",
+		"errorAlEnviar": "Error al enviar el correo.",
+		"errorRed": "Error de red."
 	},
 	"dashboard": {
 		"bienvenido": "¡Bienvenido!"
+	},
+	"registerClient": {
+		"eresTester?": "¿Eres un Tester?",
+		"registrarTester": "Registrarse como Tester",
+		"eresCliente?": "¿Ya tienes una cuenta?",
+		"login": "Login",
+		"aboutYourself": "Acerca de ti...",
+		"nombre": "Nombre",
+		"apellidos": "Apellidos",
+		"email": "Correo",
+		"siguiente": "Siguiente",
+		"sobreTuEmpresa": "Sobre tu empresa...",
+		"nombreEmpresa": "Nombre de la empresa",
+		"direccionEmpresa": "Dirección de la empresa",
+		"nif": "NIF",
+		"atras": "Atrás",
+		"enviar": "Enviar"
 	}
 }

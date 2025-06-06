@@ -12,7 +12,7 @@ export default function Login() {
 	const [password, setPassword] = useState('');
 	const [rememberMe, setRememberMe] = useState('');
 	const [error, setError] = useState('');
-	const [setSuccess] = useState(false);
+	const [, setSuccess] = useState(false);
 	const navigate = useNavigate();
 
 	const recaptchaRef = React.useRef();
@@ -59,7 +59,7 @@ export default function Login() {
 						classParent={"mb-5"}
 					/>
 					<div>
-						<h3 class="fw-bold fs-2 text-center mb-5">{t('login.yourestarting')}</h3>
+						<h3 class="fw-bold fs-2 text-center mb-5">{t('general.yourestarting')}</h3>
 					</div>
 					<div>
 						<form onSubmit={handleSubmit}>

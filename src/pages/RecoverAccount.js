@@ -17,12 +17,12 @@ export default function RecoverAccount() {
 			});
 			const data = await res.json();
 			if (res.ok) {
-				setMessage('Te hemos enviado un enlace de recuperación al correo.');
+				setMessage(t('recoverAccount.teHemosEnviadoUnEnlace'));
 			} else {
-				setMessage(data.error || 'Error al enviar el correo.');
+				setMessage(data.error || t('recoverAccount.errorAlEnviar'));
 			}
 		} catch (err) {
-			setMessage('Error de red.');
+			setMessage(t('recoverAccount.errorRed'));
 		}
 	};
 
@@ -32,7 +32,7 @@ export default function RecoverAccount() {
 			<form onSubmit={handleSubmit}>
 				<label>{t('recoverAccount.introduceEmail')}:</label>
 				<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-				<button type="submit">Enviar enlace</button>
+				<button type="submit">{t('recoverAccount.enviarEnlace')}</button>
 			</form>
 			{message && <p>{message}</p>}
 		</div>

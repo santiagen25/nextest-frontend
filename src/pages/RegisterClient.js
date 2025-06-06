@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { registerClient } from '../services/authService';
 import AuthLayout from '../components/AuthLayout';
 import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
+import { t } from 'i18next';
 
 export default function RegisterClient() {
   const [step, setStep] = useState(1);
@@ -36,60 +37,60 @@ export default function RegisterClient() {
         <div class="w-50 align-items-center justify-content-center">
             <div class="container px-5">
 				<LinkInLoginsRegisters
-					text="Are you a Tester?"
+					text={t('registerClient.eresTester?')}
 					url="/register-tester"
-					linkText="Register as Tester"
+					linkText={t('registerClient.registrarTester')}
 					classParent={""}
 				/>
 				<LinkInLoginsRegisters
-					text="Already have an account?"
+					text={t('registerClient.eresCliente?')}
 					url="/login"
-					linkText="Login"
+					linkText={t('registerClient.login')}
 					classParent={"mb-5"}
 				/>
                 <div>
-                    <h3 class="fw-bold fs-2 text-center mb-5">You're starting something new, let's make it a way of life ;-)</h3>
+                    <h3 class="fw-bold fs-2 text-center mb-5">{t('general.yourestarting')}</h3>
                 </div>
                 <div>
                     <form onSubmit={handleSubmit}>
                         {step === 1 && (
                         <>
-                            <h4>About yourself...</h4>
+                            <h4>{t('registerClient.aboutYourself')}</h4>
                             <div>
-                                <p>First name:</p>
+                                <p>{t('registerClient.nombre')}:</p>
                                 <input name="name" placeholder="name..." value={form.name} onChange={handleChange} required />
                             </div>
                             <div>
-                                <p>Last name:</p>
+                                <p>{t('registerClient.apellidos')}:</p>
                                 <input name="lastName" placeholder="last name..." value={form.lastName} onChange={handleChange} required />
                             </div>
                             <div>
-                                <p>email:</p>
-                                <input name="email" placeholder="email..." value={form.email} onChange={handleChange} required />
+                                <p>{t('registerClient.correo')}:</p>
+                                <input name="email" placeholder={t('registerClient.correo')} value={form.email} onChange={handleChange} required />
                             </div>
                             <div class="d-flex justify-content-end">
-                                <button type="button" class="mt-5" onClick={nextStep}>Next</button>
+                                <button type="button" class="mt-5" onClick={nextStep}>{t('registerClient.siguiente')}</button>
                             </div>
                         </>
                         )}
                         {step === 2 && (
                         <>
-                            <h4>About your company...</h4>
+                            <h4>{t('registerClient.sobreTuEmpresa')}</h4>
                             <div class="mt-3">
-                                <p>Company name:</p>
+                                <p>{t('registerClient.nombreEmpresa')}:</p>
                                 <input name="companyName" placeholder="company name..." value={form.companyName} onChange={handleChange} required />
                             </div>
                             <div class="mt-3">
-                                <p>Address:</p>
+                                <p>{t('registerClient.direccionEmpresa')}:</p>
                                 <input name="companyAddress" placeholder="company address..." value={form.companyAddress} onChange={handleChange} required />
                             </div>
                             <div class="mt-3">
-                                <p>NIF:</p>
+                                <p>{t('registerClient.nif')}:</p>
                                 <input name="companyId" placeholder="company ID..." value={form.companyId} onChange={handleChange} required />
                             </div>
                             <div class="d-flex justify-content-between mt-3">
-                                <button type="button" class="" onClick={prevStep}>Back</button>
-                                <button type="submit" class="">Send</button>
+                                <button type="button" class="" onClick={prevStep}>{t('registerClient.atras')}</button>
+                                <button type="submit" class="">{t('registerClient.enviar')}</button>
                             </div>
                         </>
                         )}

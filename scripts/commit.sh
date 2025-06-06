@@ -18,3 +18,14 @@ else
   git push origin "$RAMA"
   echo "✅ Commit vacío subido a '$RAMA'"
 fi
+
+read -p "🚀 ¿Quieres hacer deploy? (y/n): " RESPUESTA
+case "$RESPUESTA" in
+  y|Y|yes|YES )
+    echo "📦 Lanzando deploy..."
+    npm run deploy
+    ;;
+  * )
+    echo "❌ Deploy cancelado."
+    ;;
+esac
