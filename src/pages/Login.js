@@ -12,7 +12,7 @@ export default function Login() {
 	const [password, setPassword] = useState('');
 	const [rememberMe, setRememberMe] = useState('');
 	const [error, setError] = useState('');
-	const [success, setSuccess] = useState(false);
+	const [setSuccess] = useState(false);
 	const navigate = useNavigate();
 
 	const recaptchaRef = React.useRef();
@@ -55,7 +55,7 @@ export default function Login() {
 					<LinkInLoginsRegisters
 						text={t('login.noTienesCuenta?')}
 						url="/register-client"
-						linkText="Register"
+						linkText={t('login.registrarse')}
 						classParent={"mb-5"}
 					/>
 					<div>
@@ -103,7 +103,7 @@ export default function Login() {
 							<LinkInLoginsRegisters
 								text={t('login.passwdOlvidada')}
 								url="/reset-password"
-								linkText="Reset Password"
+								linkText={t('login.resetpasswd')}
 								classParent={"mb-5 mt-4 d-flex justify-content-center"}
 							/>
 
@@ -118,10 +118,7 @@ export default function Login() {
 							<div className="d-flex justify-content-end mt-4">
 								<button type="submit">{t('login.entrar')}</button>
 							</div>
-
-							{error && <p style={{ color: 'red' }}>{error}</p>}
 						</form>
-
 						{error && <p style={{ color: 'red' }}>{error}</p>}
 					</div>
 				</div>

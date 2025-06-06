@@ -1,4 +1,3 @@
-// src/pages/Dashboard.js
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -7,7 +6,7 @@ export default function Dashboard() {
 
 	return (
 		<div style={{ padding: '2rem' }}>
-			<h1>Bienvenido al Dashboard</h1>
+			<h1>{t('dashboard.bienvenido')}</h1>
 			<p>Aquí podrás ver el resumen de tu actividad.</p>
 
 			{/* Aquí puedes meter widgets, estadísticas, etc. */}

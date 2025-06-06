@@ -9,6 +9,15 @@
 		"recordarme": "Remember me",
 		"entrar": "Log in",
 		"passwdOlvidada": "Have you forgoten your password?",
-		"noTienesCuenta?": "Don't have an account?"
+		"noTienesCuenta?": "Don't have an account?",
+		"resetpasswd": "Reset Password",
+		"registrarse": "Register"
+	},
+	"recoverAccount": {
+		"tituloRecuperar": "Recover password",
+		"introduceEmail": "Introduce your email"
+	},
+	"dashboard": {
+		"bienvenido": "Welcome!"
 	}
 }

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Comprueba si hay cambios sin commitear
 if ! git diff --quiet || ! git diff --cached --quiet; then
   echo "Hay cambios sin subir. Realizando commit automatico."
   git add .
