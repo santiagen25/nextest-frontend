@@ -13,13 +13,14 @@ export default function Login() {
 	const [rememberMe, setRememberMe] = useState('');
 	const [error, setError] = useState('');
 	const [, setSuccess] = useState(false);
+	const [captchaVerified, setCaptchaVerified] = useState(false);
 	const navigate = useNavigate();
 
 	const recaptchaRef = React.useRef();
 
 	const handleChange = (token) => {
 		console.log("Token del captcha:", token);
-		// Envíalo a tu backend para verificación
+		setCaptchaVerified(!!token);
 	};
 
 	const handleSubmit = async (e) => {
@@ -29,6 +30,10 @@ export default function Login() {
 
 		if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userId)) {
 			return setError('Introduce un correo electrónico válido');
+		}
+
+		if (!captchaVerified) {
+			return setError('Por favor, completa el reCAPTCHA.');
 		}
 
 		const objectToSend = {
@@ -116,7 +121,9 @@ export default function Login() {
 							</div>
 
 							<div className="d-flex justify-content-end mt-4">
-								<button type="submit">{t('login.entrar')}</button>
+								<button type="submit"  disabled={!captchaVerified}>
+									{t('login.entrar')}
+								</button>
 							</div>
 						</form>
 						{error && <p style={{ color: 'red' }}>{error}</p>}

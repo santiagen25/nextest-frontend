@@ -9,6 +9,8 @@ import RecoverAccount from './pages/RecoverAccount';
 import Dashboard from './pages/Dashboard';
 import PrivateRoute from './components/PrivateRoute';
 import './i18n';
+import CreateProject from './pages/CreateProject';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -26,7 +28,8 @@ function App() {
 				<Dashboard />
 			</PrivateRoute>
 		} />
-        <Route path="*" element={<p>404</p>} />
+		<Route path="/create-project" element={<CreateProject />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
   );

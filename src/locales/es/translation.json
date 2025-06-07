@@ -45,5 +45,9 @@
 		"nif": "NIF",
 		"atras": "Atrás",
 		"enviar": "Enviar"
+	},
+	"createProject": {
+		"letsStartTesting": "¡Vamos a poner en marcha tu Testing!",
+		"aboutProject": "Acerca del proyecto..."
 	}
 }

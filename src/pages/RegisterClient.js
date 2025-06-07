@@ -58,15 +58,15 @@ export default function RegisterClient() {
                             <h4>{t('registerClient.aboutYourself')}</h4>
                             <div>
                                 <p>{t('registerClient.nombre')}:</p>
-                                <input name="name" placeholder="name..." value={form.name} onChange={handleChange} required />
+                                <input name="name" placeholder={`${t('registerClient.nombre')}...`}  value={form.name} onChange={handleChange} required />
                             </div>
                             <div>
                                 <p>{t('registerClient.apellidos')}:</p>
-                                <input name="lastName" placeholder="last name..." value={form.lastName} onChange={handleChange} required />
+                                <input name="lastName" placeholder={`${t('registerClient.apellidos')}...`} value={form.lastName} onChange={handleChange} required />
                             </div>
                             <div>
-                                <p>{t('registerClient.correo')}:</p>
-                                <input name="email" placeholder={t('registerClient.correo')} value={form.email} onChange={handleChange} required />
+                                <p>{t('registerClient.email')}:</p>
+                                <input name="email" placeholder={`${t('registerClient.email')}...`} value={form.email} onChange={handleChange} required />
                             </div>
                             <div class="d-flex justify-content-end">
                                 <button type="button" class="mt-5" onClick={nextStep}>{t('registerClient.siguiente')}</button>
@@ -78,15 +78,15 @@ export default function RegisterClient() {
                             <h4>{t('registerClient.sobreTuEmpresa')}</h4>
                             <div class="mt-3">
                                 <p>{t('registerClient.nombreEmpresa')}:</p>
-                                <input name="companyName" placeholder="company name..." value={form.companyName} onChange={handleChange} required />
+                                <input name="companyName" placeholder={`${t('registerClient.nombreEmpresa')}...`} value={form.companyName} onChange={handleChange} required />
                             </div>
                             <div class="mt-3">
                                 <p>{t('registerClient.direccionEmpresa')}:</p>
-                                <input name="companyAddress" placeholder="company address..." value={form.companyAddress} onChange={handleChange} required />
+                                <input name="companyAddress" placeholder={`${t('registerClient.direccionEmpresa')}...`} value={form.companyAddress} onChange={handleChange} required />
                             </div>
                             <div class="mt-3">
                                 <p>{t('registerClient.nif')}:</p>
-                                <input name="companyId" placeholder="company ID..." value={form.companyId} onChange={handleChange} required />
+                                <input name="companyId" placeholder={`${t('registerClient.nif')}...`} value={form.companyId} onChange={handleChange} required />
                             </div>
                             <div class="d-flex justify-content-between mt-3">
                                 <button type="button" class="" onClick={prevStep}>{t('registerClient.atras')}</button>
