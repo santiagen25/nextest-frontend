@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AuthLayout from '../components/AuthLayout';
 import { registerTester } from '../services/authService';
 import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
+import Footer from '../components/Footer';
 
 export default function RegisterTester() {
 	const [step, setStep] = useState(1);
@@ -21,7 +22,7 @@ export default function RegisterTester() {
 	});
 	const [setError] = useState('');
 	const [setSuccess] = useState(false);
-	
+
 	const toggleInteres = (interes) => {
 		setForm((prev) => ({
 			...prev,
@@ -52,7 +53,7 @@ export default function RegisterTester() {
 			password: form.password,
 			experience: undefined
 		}
-	
+
 		try {
 			const result = await registerTester(objectToSend);
 			console.log('Login OK:', result);
@@ -76,137 +77,140 @@ export default function RegisterTester() {
 	];
 
 	return (
-		<div className="d-flex vh-100">
-			<AuthLayout />
-			<div className="w-50 align-items-center justify-content-center">
-				<div className="container px-5">
-					<LinkInLoginsRegisters
-						text="Are you a Client?"
-						url="/register-client"
-						linkText="Register as Client"
-						classParent={""}
-					/>
-					<LinkInLoginsRegisters
-						text="Already have an account?"
-						url="/login"
-						linkText="Login"
-						classParent={"mb-5"}
-					/>
-					<div>
-						<h3 className="fw-bold fs-2 text-center mb-5">You're starting something new, let's make it a way of life ;-)</h3>
-					</div>
-					<div>
-						<form onSubmit={handleSubmit}>
-							{step === 1 && (
-								<>
-									<h4>About yourself...</h4>
-									<div>
-										<p>First name:</p>
-										<input name="name" placeholder="name..." value={form.name} onChange={handleChange} required />
-									</div>
-									<div>
-										<p>Last name:</p>
-										<input name="lastName" placeholder="last name..." value={form.lastName} onChange={handleChange} required />
-									</div>
-									<div>
-										<p>Email:</p>
-										<input name="email" placeholder="email..." value={form.email} onChange={handleChange} required />
-									</div>
-									<div>
-										<p>Languages:</p>
-										<input name="email" placeholder="languages..." value={form.email} onChange={handleChange} required />
-									</div>
-									<div>
-										<p>Date of Birth:</p>
-										<input name="email" type="date" placeholder="birth..." value={form.email} onChange={handleChange} required />
-									</div>
-									<div class="d-flex justify-content-end">
-										<button type="button" class="mt-5" onClick={nextStep}>Next</button>
-									</div>
-								</>
-							)}
-							{step === 2 && (
-								<>
-									<h4>Where you're living...</h4>
-									<div>
-										<p>City:</p>
-										<input name="name" placeholder="city..." value={form.name} onChange={handleChange} required />
-									</div>
-									<div>
-										<p>Post Code:</p>
-										<input name="lastName" placeholder="code..." value={form.lastName} onChange={handleChange} required />
-									</div>
-									<div>
-										<p>Contry:</p>
-										<input name="email" placeholder="Contry..." value={form.email} onChange={handleChange} required />
-									</div>
-									<div className="d-flex justify-content-end mt-5">
-										<button type="button" onClick={prevStep}>Back</button>
-										<button type="button" onClick={nextStep}>Next</button>
-									</div>
-								</>
-							)}
-							{step === 3 && (
-								<>
-									<h4>Your experience...</h4>
-									<label>Experiencia:</label><br />
-									{['Sin experiencia', 'Menos de 2 años', '3 – 5 años', '6 – 10 años', 'Más de 10 años'].map((exp) => (
-										<div className="form-check" key={exp}>
-											<label className="form-check-label">
-												<input
-												className="form-check-input"
-												type="radio"
-												name="experiencia"
-												value={exp}
-												checked={form.experiencia === exp}
-												onChange={handleChange}
-												/>
-												{exp}
-											</label>
+		<div>
+			<div className="d-flex vh-100">
+				<AuthLayout />
+				<div className="w-50 align-items-center justify-content-center">
+					<div className="container px-5">
+						<LinkInLoginsRegisters
+							text="Are you a Client?"
+							url="/register-client"
+							linkText="Register as Client"
+							classParent={""}
+						/>
+						<LinkInLoginsRegisters
+							text="Already have an account?"
+							url="/login"
+							linkText="Login"
+							classParent={"mb-5"}
+						/>
+						<div>
+							<h3 className="fw-bold fs-2 text-center mb-5">You're starting something new, let's make it a way of life ;-)</h3>
+						</div>
+						<div>
+							<form onSubmit={handleSubmit}>
+								{step === 1 && (
+									<>
+										<h4>About yourself...</h4>
+										<div>
+											<p>First name:</p>
+											<input name="name" placeholder="name..." value={form.name} onChange={handleChange} required />
 										</div>
-									))}<br />
-									<div className="d-flex justify-content-end mt-5">
-										<button type="button" onClick={prevStep}>Atrás</button>
-										<button type="button" onClick={nextStep}>Siguiente</button>
-									</div>
-								</>
-							)}
-							{step === 4 && (
-								<>
-									<label>Intereses:</label><br />
-									{intereses.map((item) => (
-									<div className="form-check" key={item}>
-										<input
-										className="form-check-input"
-										type="checkbox"
-										checked={form.intereses.includes(item)}
-										onChange={() => toggleInteres(item)}
-										id={item}
-										/>
-										<label className="form-check-label" htmlFor={item}>
-										{item}
-										</label>
-									</div>
-									))}
+										<div>
+											<p>Last name:</p>
+											<input name="lastName" placeholder="last name..." value={form.lastName} onChange={handleChange} required />
+										</div>
+										<div>
+											<p>Email:</p>
+											<input name="email" placeholder="email..." value={form.email} onChange={handleChange} required />
+										</div>
+										<div>
+											<p>Languages:</p>
+											<input name="email" placeholder="languages..." value={form.email} onChange={handleChange} required />
+										</div>
+										<div>
+											<p>Date of Birth:</p>
+											<input name="email" type="date" placeholder="birth..." value={form.email} onChange={handleChange} required />
+										</div>
+										<div class="d-flex justify-content-end">
+											<button type="button" class="mt-5" onClick={nextStep}>Next</button>
+										</div>
+									</>
+								)}
+								{step === 2 && (
+									<>
+										<h4>Where you're living...</h4>
+										<div>
+											<p>City:</p>
+											<input name="name" placeholder="city..." value={form.name} onChange={handleChange} required />
+										</div>
+										<div>
+											<p>Post Code:</p>
+											<input name="lastName" placeholder="code..." value={form.lastName} onChange={handleChange} required />
+										</div>
+										<div>
+											<p>Contry:</p>
+											<input name="email" placeholder="Contry..." value={form.email} onChange={handleChange} required />
+										</div>
+										<div className="d-flex justify-content-end mt-5">
+											<button type="button" onClick={prevStep}>Back</button>
+											<button type="button" onClick={nextStep}>Next</button>
+										</div>
+									</>
+								)}
+								{step === 3 && (
+									<>
+										<h4>Your experience...</h4>
+										<label>Experiencia:</label><br />
+										{['Sin experiencia', 'Menos de 2 años', '3 – 5 años', '6 – 10 años', 'Más de 10 años'].map((exp) => (
+											<div className="form-check" key={exp}>
+												<label className="form-check-label">
+													<input
+														className="form-check-input"
+														type="radio"
+														name="experiencia"
+														value={exp}
+														checked={form.experiencia === exp}
+														onChange={handleChange}
+													/>
+													{exp}
+												</label>
+											</div>
+										))}<br />
+										<div className="d-flex justify-content-end mt-5">
+											<button type="button" onClick={prevStep}>Atrás</button>
+											<button type="button" onClick={nextStep}>Siguiente</button>
+										</div>
+									</>
+								)}
+								{step === 4 && (
+									<>
+										<label>Intereses:</label><br />
+										{intereses.map((item) => (
+											<div className="form-check" key={item}>
+												<input
+													className="form-check-input"
+													type="checkbox"
+													checked={form.intereses.includes(item)}
+													onChange={() => toggleInteres(item)}
+													id={item}
+												/>
+												<label className="form-check-label" htmlFor={item}>
+													{item}
+												</label>
+											</div>
+										))}
 
-									<div className="mt-3">
-										<p>What tools are you proficient?</p>
-										<textarea type="text" name="herramientas" placeholder="Tools..." value={form.name} onChange={handleChange} required></textarea>
-									</div>
-									<div className="mt-3">
-										<p>What languages are you proficient?</p>
-										<textarea type="text" name="lenguajes" placeholder="Tools..." value={form.name} onChange={handleChange} required></textarea>
-									</div>
-									<div className="d-flex justify-content-end mt-5">
-										<button type="button" onClick={prevStep}>Atrás</button>
-										<button type="submit">Finalizar</button>
-									</div>
-								</>
-							)}
-						</form>
+										<div className="mt-3">
+											<p>What tools are you proficient?</p>
+											<textarea type="text" name="herramientas" placeholder="Tools..." value={form.name} onChange={handleChange} required></textarea>
+										</div>
+										<div className="mt-3">
+											<p>What languages are you proficient?</p>
+											<textarea type="text" name="lenguajes" placeholder="Tools..." value={form.name} onChange={handleChange} required></textarea>
+										</div>
+										<div className="d-flex justify-content-end mt-5">
+											<button type="button" onClick={prevStep}>Atrás</button>
+											<button type="submit">Finalizar</button>
+										</div>
+									</>
+								)}
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 }

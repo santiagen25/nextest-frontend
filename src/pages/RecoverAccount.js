@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import Footer from '../components/Footer';
+import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
 
 export default function RecoverAccount() {
 	const { t } = useTranslation();
@@ -27,14 +29,25 @@ export default function RecoverAccount() {
 	};
 
 	return (
-		<div className="container">
-			<h2>{t('recoverAccount.tituloRecuperar')}</h2>
-			<form onSubmit={handleSubmit}>
-				<label>{t('recoverAccount.introduceEmail')}:</label>
-				<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-				<button type="submit">{t('recoverAccount.enviarEnlace')}</button>
-			</form>
-			{message && <p>{message}</p>}
+		<div>
+			<div className="vh-100 d-flex justify-content-center align-items-center">
+				<div className="text-center">
+					<h2>{t('recoverAccount.tituloRecuperar')}</h2>
+					<form onSubmit={handleSubmit}>
+						<label className="mt-5 mb-1">{t('recoverAccount.introduceEmail')}:</label>
+						<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+						<button className="mt-3" type="submit">{t('recoverAccount.enviarEnlace')}</button>
+					</form>
+					{message && <p>{message}</p>}
+					<LinkInLoginsRegisters
+						text={t('recoverAccount.irAlLogin')}
+						url="/login"
+						linkText={t('registerClient.login')}
+						classParent={"mt-5 d-flex justify-content-center"}
+					/>
+				</div>
+			</div>
+			<Footer />
 		</div>
 	);
 }

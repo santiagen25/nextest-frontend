@@ -3,101 +3,105 @@ import { registerClient } from '../services/authService';
 import AuthLayout from '../components/AuthLayout';
 import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
 import { t } from 'i18next';
+import Footer from '../components/Footer';
 
 export default function RegisterClient() {
-  const [step, setStep] = useState(1);
-  const [form, setForm] = useState({
-    name: '',
-    lastName: '',
-    email: '',
-    companyName: '',
-    companyAddress: '',
-    companyId: ''
-  });
+	const [step, setStep] = useState(1);
+	const [form, setForm] = useState({
+		name: '',
+		lastName: '',
+		email: '',
+		companyName: '',
+		companyAddress: '',
+		companyId: ''
+	});
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+	const handleChange = (e) => {
+		setForm({ ...form, [e.target.name]: e.target.value });
+	};
 
-  const nextStep = () => setStep(step + 1);
-  const prevStep = () => setStep(step - 1);
+	const nextStep = () => setStep(step + 1);
+	const prevStep = () => setStep(step - 1);
 
-  const handleSubmit = async () => {
-    try {
-        await registerClient(form);
-        console.log("datos enviados");
-    } catch (error) {
-        alert("error al enviar datos");
-    }
-  };
+	const handleSubmit = async () => {
+		try {
+			await registerClient(form);
+			console.log("datos enviados");
+		} catch (error) {
+			alert("error al enviar datos");
+		}
+	};
 
-  return (
-    <div class="d-flex vh-100">
-        <AuthLayout />
-        <div class="w-50 align-items-center justify-content-center">
-            <div class="container px-5">
-				<LinkInLoginsRegisters
-					text={t('registerClient.eresTester?')}
-					url="/register-tester"
-					linkText={t('registerClient.registrarTester')}
-					classParent={""}
-				/>
-				<LinkInLoginsRegisters
-					text={t('registerClient.eresCliente?')}
-					url="/login"
-					linkText={t('registerClient.login')}
-					classParent={"mb-5"}
-				/>
-                <div>
-                    <h3 class="fw-bold fs-2 text-center mb-5">{t('general.yourestarting')}</h3>
-                </div>
-                <div>
-                    <form onSubmit={handleSubmit}>
-                        {step === 1 && (
-                        <>
-                            <h4>{t('registerClient.aboutYourself')}</h4>
-                            <div>
-                                <p>{t('registerClient.nombre')}:</p>
-                                <input name="name" placeholder={`${t('registerClient.nombre')}...`}  value={form.name} onChange={handleChange} required />
-                            </div>
-                            <div>
-                                <p>{t('registerClient.apellidos')}:</p>
-                                <input name="lastName" placeholder={`${t('registerClient.apellidos')}...`} value={form.lastName} onChange={handleChange} required />
-                            </div>
-                            <div>
-                                <p>{t('registerClient.email')}:</p>
-                                <input name="email" placeholder={`${t('registerClient.email')}...`} value={form.email} onChange={handleChange} required />
-                            </div>
-                            <div class="d-flex justify-content-end">
-                                <button type="button" class="mt-5" onClick={nextStep}>{t('registerClient.siguiente')}</button>
-                            </div>
-                        </>
-                        )}
-                        {step === 2 && (
-                        <>
-                            <h4>{t('registerClient.sobreTuEmpresa')}</h4>
-                            <div class="mt-3">
-                                <p>{t('registerClient.nombreEmpresa')}:</p>
-                                <input name="companyName" placeholder={`${t('registerClient.nombreEmpresa')}...`} value={form.companyName} onChange={handleChange} required />
-                            </div>
-                            <div class="mt-3">
-                                <p>{t('registerClient.direccionEmpresa')}:</p>
-                                <input name="companyAddress" placeholder={`${t('registerClient.direccionEmpresa')}...`} value={form.companyAddress} onChange={handleChange} required />
-                            </div>
-                            <div class="mt-3">
-                                <p>{t('registerClient.nif')}:</p>
-                                <input name="companyId" placeholder={`${t('registerClient.nif')}...`} value={form.companyId} onChange={handleChange} required />
-                            </div>
-                            <div class="d-flex justify-content-between mt-3">
-                                <button type="button" class="" onClick={prevStep}>{t('registerClient.atras')}</button>
-                                <button type="submit" class="">{t('registerClient.enviar')}</button>
-                            </div>
-                        </>
-                        )}
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-  );
+	return (
+		<div>
+			<div class="d-flex vh-100">
+				<AuthLayout />
+				<div class="w-50 align-items-center justify-content-center">
+					<div class="container px-5">
+						<LinkInLoginsRegisters
+							text={t('registerClient.eresTester?')}
+							url="/register-tester"
+							linkText={t('registerClient.registrarTester')}
+							classParent={""}
+						/>
+						<LinkInLoginsRegisters
+							text={t('registerClient.eresCliente?')}
+							url="/login"
+							linkText={t('registerClient.login')}
+							classParent={"mb-5"}
+						/>
+						<div>
+							<h3 class="fw-bold fs-2 text-center mb-5">{t('general.yourestarting')}</h3>
+						</div>
+						<div>
+							<form onSubmit={handleSubmit}>
+								{step === 1 && (
+									<>
+										<h4>{t('registerClient.aboutYourself')}</h4>
+										<div>
+											<p>{t('registerClient.nombre')}:</p>
+											<input name="name" placeholder={`${t('registerClient.nombre')}...`} value={form.name} onChange={handleChange} required />
+										</div>
+										<div>
+											<p>{t('registerClient.apellidos')}:</p>
+											<input name="lastName" placeholder={`${t('registerClient.apellidos')}...`} value={form.lastName} onChange={handleChange} required />
+										</div>
+										<div>
+											<p>{t('registerClient.email')}:</p>
+											<input name="email" placeholder={`${t('registerClient.email')}...`} value={form.email} onChange={handleChange} required />
+										</div>
+										<div class="d-flex justify-content-end">
+											<button type="button" class="mt-5" onClick={nextStep}>{t('registerClient.siguiente')}</button>
+										</div>
+									</>
+								)}
+								{step === 2 && (
+									<>
+										<h4>{t('registerClient.sobreTuEmpresa')}</h4>
+										<div class="mt-3">
+											<p>{t('registerClient.nombreEmpresa')}:</p>
+											<input name="companyName" placeholder={`${t('registerClient.nombreEmpresa')}...`} value={form.companyName} onChange={handleChange} required />
+										</div>
+										<div class="mt-3">
+											<p>{t('registerClient.direccionEmpresa')}:</p>
+											<input name="companyAddress" placeholder={`${t('registerClient.direccionEmpresa')}...`} value={form.companyAddress} onChange={handleChange} required />
+										</div>
+										<div class="mt-3">
+											<p>{t('registerClient.nif')}:</p>
+											<input name="companyId" placeholder={`${t('registerClient.nif')}...`} value={form.companyId} onChange={handleChange} required />
+										</div>
+										<div class="d-flex justify-content-between mt-3">
+											<button type="button" class="" onClick={prevStep}>{t('registerClient.atras')}</button>
+											<button type="submit" class="">{t('registerClient.enviar')}</button>
+										</div>
+									</>
+								)}
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<Footer />
+		</div>
+	);
 }

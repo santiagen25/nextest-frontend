@@ -24,7 +24,8 @@
 		"enviarEnlace": "Send link",
 		"teHemosEnviadoUnEnlace": "We've sent you a recover link to your email.",
 		"errorAlEnviar": "Error sending the email.",
-		"errorRed": "Network error."
+		"errorRed": "Network error.",
+		"irAlLogin": "Go to Login"
 	},
 	"dashboard": {
 		"bienvenido": "Welcome!"
@@ -50,5 +51,10 @@
 		"letsStartTesting": "Let's get your testing underway!",
 		"aboutProject": "About the project...",
 		"projectName": "Project name"
+	},
+	"footer": {
+		"soluciones": "Solutions",
+		"contactanos": "Contact us",
+		"followUs": "Follow us"
 	}
 }

@@ -56,6 +56,11 @@ button:hover {
   box-shadow: none;
 }
 
+form.adaptedForm {
+	width:40vw;
+	min-width:300px;
+}
+
 /* --- Responsive zone --- */
 
 @media (max-width: 480px) {
