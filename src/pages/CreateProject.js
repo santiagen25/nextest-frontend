@@ -36,7 +36,7 @@ export default function CreateProject() {
 					<form className="" onSubmit={handleSubmit}>
 						<h4>{t('createProject.aboutProject')}</h4>
 						<div>
-							<p>Project name:</p>
+							<p>{t('createProject.projectName')}:</p>
 							<input name="projectName" value={form.projectName} onChange={handleChange} required />
 						</div>
 						<div>

@@ -48,6 +48,7 @@
 	},
 	"createProject": {
 		"letsStartTesting": "Let's get your testing underway!",
-		"aboutProject": "About the project..."
+		"aboutProject": "About the project...",
+		"projectName": "Project name"
 	}
 }
