@@ -7,3 +7,8 @@ export const apiFuncional = axios.create({
 export const apiLogin = axios.create({
 	baseURL: 'http://92.205.178.174:3011',
 });
+
+export const apiCreateProject = axios.create({
+	baseURL: 'http://92.205.178.174:3011',
+});
+

@@ -29,6 +29,8 @@ function App() {
 			</PrivateRoute>
 		} />
 		<Route path="/create-project" element={<CreateProject />} />
+		<Route path="/configurate-project" element={<CreateProject />} />
+		<Route path="/assign-profiles" element={<CreateProject />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AuthLayout from '../components/AuthLayout';
 import { registerTester } from '../services/authService';
 import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
+import { t } from 'i18next';
 import Footer from '../components/Footer';
 
 export default function RegisterTester() {
@@ -95,41 +96,41 @@ export default function RegisterTester() {
 							classParent={"mb-5"}
 						/>
 						<div>
-							<h3 className="fw-bold fs-2 text-center mb-5">You're starting something new, let's make it a way of life ;-)</h3>
+							<h3 className="fw-bold fs-2 text-center mb-5">{t('general.yourestarting')}</h3>
 						</div>
 						<div>
 							<form onSubmit={handleSubmit}>
 								{step === 1 && (
 									<>
-										<h4>About yourself...</h4>
+										<h4>{t('registerClient.aboutYourself')}</h4>
 										<div>
-											<p>First name:</p>
-											<input name="name" placeholder="name..." value={form.name} onChange={handleChange} required />
+											<p>{t('registerClient.nombre')}:</p>
+											<input name="name" placeholder={`${t('registerClient.nombre')}...`} value={form.name} onChange={handleChange} required />
 										</div>
 										<div>
-											<p>Last name:</p>
-											<input name="lastName" placeholder="last name..." value={form.lastName} onChange={handleChange} required />
+											<p>{t('registerClient.apellidos')}:</p>
+											<input name="lastName" placeholder={`${t('registerClient.apellidos')}...`} value={form.lastName} onChange={handleChange} required />
 										</div>
 										<div>
-											<p>Email:</p>
-											<input name="email" placeholder="email..." value={form.email} onChange={handleChange} required />
+											<p>{t('registerClient.email')}:</p>
+											<input name="email" placeholder={`${t('registerClient.email')}...`} value={form.email} onChange={handleChange} required />
 										</div>
 										<div>
-											<p>Languages:</p>
-											<input name="email" placeholder="languages..." value={form.email} onChange={handleChange} required />
+											<p>{t('registerTester.idiomas')}:</p>
+											<input name="email" placeholder={`${t('registerTester.idiomas')}...`} value={form.email} onChange={handleChange} required />
 										</div>
 										<div>
-											<p>Date of Birth:</p>
-											<input name="email" type="date" placeholder="birth..." value={form.email} onChange={handleChange} required />
+											<p>{t('registerTester.nacimiento')}:</p>
+											<input name="email" type="date" placeholder={`${t('registerTester.nacimiento')}...`} value={form.email} onChange={handleChange} required />
 										</div>
 										<div class="d-flex justify-content-end">
-											<button type="button" class="mt-5" onClick={nextStep}>Next</button>
+											<button type="button" className="mt-5 text-uppercase" onClick={nextStep}>{t('registerClient.next')}</button>
 										</div>
 									</>
 								)}
 								{step === 2 && (
 									<>
-										<h4>Where you're living...</h4>
+										<h4>{t('registerTester.dondeVives')}...</h4>
 										<div>
 											<p>City:</p>
 											<input name="name" placeholder="city..." value={form.name} onChange={handleChange} required />

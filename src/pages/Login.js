@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import AuthLayout from '../components/AuthLayout';
 import { login } from '../services/authService';
@@ -18,6 +18,10 @@ export default function Login() {
 	const navigate = useNavigate();
 
 	const recaptchaRef = React.useRef();
+
+	useEffect(() => {
+		document.title = 'Nextest - Login';
+	}, []);
 
 	const handleChange = (token) => {
 		console.log("Token del captcha:", token);
@@ -55,10 +59,10 @@ export default function Login() {
 
 	return (
 		<div>
-			<div class="d-flex vh-100">
+			<div className="d-flex vh-100">
 				<AuthLayout />
-				<div class="w-50 align-items-center justify-content-center">
-					<div class="container px-5">
+				<div className="w-50 align-items-center justify-content-center">
+					<div className="mt-5 px-5">
 						<LinkInLoginsRegisters
 							text={t('login.noTienesCuenta?')}
 							url="/register-client"
@@ -72,7 +76,7 @@ export default function Login() {
 							<form onSubmit={handleSubmit}>
 								<h4>{t('login.accedeatucuenta')}</h4>
 
-								<div>
+								<div class="mt-3">
 									<label>{t('login.email')}:</label>
 									<input
 										type="email"
@@ -83,7 +87,7 @@ export default function Login() {
 									/>
 								</div>
 
-								<div>
+								<div className="mt-3">
 									<label>{t('login.passwd')}:</label>
 									<input
 										type="password"
@@ -102,7 +106,7 @@ export default function Login() {
 										checked={rememberMe}
 										onChange={(e) => setRememberMe(e.target.checked)}
 									/>
-									<label className="form-check-label" htmlFor="remember">
+									<label className="form-check-label ms-2" htmlFor="remember">
 										{t('login.recordarme')}
 									</label>
 								</div>
@@ -123,7 +127,7 @@ export default function Login() {
 								</div>
 
 								<div className="d-flex justify-content-end mt-4">
-									<button type="submit" disabled={!captchaVerified}>
+									<button type="submit" disabled={!captchaVerified} className={`text-uppercase ${!captchaVerified ? 'buttonDisabled' : ''}`}>
 										{t('login.entrar')}
 									</button>
 								</div>

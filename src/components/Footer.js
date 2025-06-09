@@ -22,7 +22,7 @@ const Footer = () => {
 				<a href="https://linkedin.com" target="_blank" rel="noreferrer">
 					<i className="fa fa-linkedin"></i> LinkedIn
 				</a>
-				<select onChange={handleChangeLanguage} className="lang-select">
+				<select onChange={handleChangeLanguage} className="form-select">
 					<option value="es">🇪🇸 {t('general.español')}</option>
 					<option value="en">🇬🇧 {t('general.ingles')}</option>
 					<option value="ca">{t('general.catalan')}</option>

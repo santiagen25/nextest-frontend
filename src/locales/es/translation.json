@@ -47,10 +47,25 @@
 		"atras": "Atrás",
 		"enviar": "Enviar"
 	},
+	"registerTester": {
+		"idiomas": "Idiomas",
+		"nacimiento": "Fecha de nacimiento",
+		"dondeVives": "Donde estás viviendo"
+	},
 	"createProject": {
 		"letsStartTesting": "¡Vamos a poner en marcha tu Testing!",
 		"aboutProject": "Acerca del proyecto...",
-		"projectName": "Nombre del proyecto"
+		"projectName": "Nombre del proyecto",
+		"descripcion": "Descripción",
+		"email": "Correo electrónico",
+		"producto": "Producto",
+		"fechaInicio": "Fecha de inicio",
+		"fechaFin": "Fecha de fin",
+		"TipoTest": "Tipo de test",
+		"seleccionaTipo": "Selecciona un tipo",
+		"manual": "Manual",
+		"automatizado": "Automatizado",
+		"crear": "Crear"
 	},
 	"footer": {
 		"soluciones": "Soluciones",
