@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import AuthLayout from '../components/AuthLayout';
 import { login } from '../services/authService';
@@ -6,6 +6,7 @@ import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Footer from '../components/Footer';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 export default function Login() {
 	const { t } = useTranslation();
@@ -19,9 +20,7 @@ export default function Login() {
 
 	const recaptchaRef = React.useRef();
 
-	useEffect(() => {
-		document.title = 'Nextest - Login';
-	}, []);
+	usePageTitle('login.title');
 
 	const handleChange = (token) => {
 		console.log("Token del captcha:", token);
@@ -70,13 +69,13 @@ export default function Login() {
 							classParent={"mb-5"}
 						/>
 						<div>
-							<h3 class="fw-bold fs-2 text-center mb-5">{t('general.yourestarting')}</h3>
+							<h3 className="fw-bold fs-2 text-center mb-5">{t('general.yourestarting')}</h3>
 						</div>
 						<div>
 							<form onSubmit={handleSubmit}>
 								<h4>{t('login.accedeatucuenta')}</h4>
 
-								<div class="mt-3">
+								<div className="mt-3">
 									<label>{t('login.email')}:</label>
 									<input
 										type="email"

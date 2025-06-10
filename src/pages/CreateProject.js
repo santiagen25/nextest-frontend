@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { t } from 'i18next';
 import Sidebar25 from '../components/Sidebar25';
 import Footer from '../components/Footer';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 export default function CreateProject() {
 	const [form, setForm] = useState({
@@ -13,6 +14,8 @@ export default function CreateProject() {
 		endDate: '',
 		testType: ''
 	});
+
+	usePageTitle('createProject.title');
 
 	const handleChange = (e) => {
 		setForm({ ...form, [e.target.name]: e.target.value });

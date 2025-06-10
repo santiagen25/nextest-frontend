@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Footer from '../components/Footer';
 import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
 import AuthLayout from '../components/AuthLayout';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 export default function RecoverAccount() {
 	const { t } = useTranslation();
@@ -13,9 +14,7 @@ export default function RecoverAccount() {
 	const [error, setError] = useState('');
 	const recaptchaRef = React.useRef();
 
-	useEffect(() => {
-		document.title = 'Nextest - Recover Account';
-	}, []);
+	usePageTitle('recoverAccount.title');
 
 	const handleChange = (token) => {
 		console.log("Token del captcha:", token);
@@ -50,7 +49,7 @@ export default function RecoverAccount() {
 
 	return (
 		<div>
-			<div class="d-flex vh-100">
+			<div className="d-flex vh-100">
 				<AuthLayout />
 				<div className="w-50 vh-100 d-flex justify-content-center align-items-center">
 					<div className="text-center">

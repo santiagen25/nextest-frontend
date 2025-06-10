@@ -16,7 +16,8 @@
 		"passwdOlvidada": "¿Has olvidado tu contraseña?",
 		"noTienesCuenta?": "¿No tienes cuenta?",
 		"resetpasswd": "Resetear contraseña",
-		"registrarse": "Registrarse"
+		"registrarse": "Registrarse",
+		"title": "Login"
 	},
 	"recoverAccount": {
 		"tituloRecuperar": "Recuperar contraseña",
@@ -25,7 +26,8 @@
 		"teHemosEnviadoUnEnlace": "Te hemos enviado un enlace de recuperación al correo.",
 		"errorAlEnviar": "Error al enviar el correo.",
 		"errorRed": "Error de red.",
-		"irAlLogin": "Ir al Login"
+		"irAlLogin": "Ir al Login",
+		"title": "Recuperar Cuenta"
 	},
 	"dashboard": {
 		"bienvenido": "¡Bienvenido!"
@@ -45,12 +47,14 @@
 		"direccionEmpresa": "Dirección de la empresa",
 		"nif": "NIF",
 		"atras": "Atrás",
-		"enviar": "Enviar"
+		"enviar": "Enviar",
+		"title": "Registrar Cliente"
 	},
 	"registerTester": {
 		"idiomas": "Idiomas",
 		"nacimiento": "Fecha de nacimiento",
-		"dondeVives": "Donde estás viviendo"
+		"dondeVives": "Donde estás viviendo",
+		"title": "Registrar Tester"
 	},
 	"createProject": {
 		"letsStartTesting": "¡Vamos a poner en marcha tu Testing!",
@@ -65,7 +69,8 @@
 		"seleccionaTipo": "Selecciona un tipo",
 		"manual": "Manual",
 		"automatizado": "Automatizado",
-		"crear": "Crear"
+		"crear": "Crear",
+		"title": "Crear Proyecto"
 	},
 	"footer": {
 		"soluciones": "Soluciones",

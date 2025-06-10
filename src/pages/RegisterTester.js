@@ -4,6 +4,7 @@ import { registerTester } from '../services/authService';
 import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
 import { t } from 'i18next';
 import Footer from '../components/Footer';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 export default function RegisterTester() {
 	const [step, setStep] = useState(1);
@@ -23,6 +24,8 @@ export default function RegisterTester() {
 	});
 	const [setError] = useState('');
 	const [setSuccess] = useState(false);
+
+	usePageTitle('registerTester.title');
 
 	const toggleInteres = (interes) => {
 		setForm((prev) => ({
@@ -123,7 +126,7 @@ export default function RegisterTester() {
 											<p>{t('registerTester.nacimiento')}:</p>
 											<input name="email" type="date" placeholder={`${t('registerTester.nacimiento')}...`} value={form.email} onChange={handleChange} required />
 										</div>
-										<div class="d-flex justify-content-end">
+										<div className="d-flex justify-content-end">
 											<button type="button" className="mt-5 text-uppercase" onClick={nextStep}>{t('registerClient.next')}</button>
 										</div>
 									</>

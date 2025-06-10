@@ -16,7 +16,8 @@
 		"passwdOlvidada": "Have you forgoten your password?",
 		"noTienesCuenta?": "Don't have an account?",
 		"resetpasswd": "Reset Password",
-		"registrarse": "Register"
+		"registrarse": "Register",
+		"title": "Login"
 	},
 	"recoverAccount": {
 		"tituloRecuperar": "Recover password",
@@ -25,7 +26,8 @@
 		"teHemosEnviadoUnEnlace": "We've sent you a recover link to your email.",
 		"errorAlEnviar": "Error sending the email.",
 		"errorRed": "Network error.",
-		"irAlLogin": "Go to Login"
+		"irAlLogin": "Go to Login",
+		"title": "Recover Account"
 	},
 	"dashboard": {
 		"bienvenido": "Welcome!"
@@ -45,12 +47,14 @@
 		"direccionEmpresa": "Company address",
 		"nif": "NIF",
 		"atras": "Back",
-		"enviar": "Send"
+		"enviar": "Send",
+		"title": "Register Client"
 	},
 	"registerTester": {
 		"idiomas": "Languages",
 		"nacimiento": "Date of birth",
-		"dondeVives": "Where you're living"
+		"dondeVives": "Where you're living",
+		"title": "Register Tester"
 	},
 	"createProject": {
 		"letsStartTesting": "Let's get your testing underway!",
@@ -65,7 +69,8 @@
 		"seleccionaTipo": "Select a type",
 		"manual": "Manual",
 		"automatizado": "Automated",
-		"crear": "Create"
+		"crear": "Create",
+		"title": "Create Project"
 	},
 	"footer": {
 		"soluciones": "Solutions",

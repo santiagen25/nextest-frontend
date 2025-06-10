@@ -4,6 +4,7 @@ import AuthLayout from '../components/AuthLayout';
 import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
 import { t } from 'i18next';
 import Footer from '../components/Footer';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 export default function RegisterClient() {
 	const [step, setStep] = useState(1);
@@ -15,6 +16,8 @@ export default function RegisterClient() {
 		companyAddress: '',
 		companyId: ''
 	});
+
+	usePageTitle('registerClient.title');
 
 	const handleChange = (e) => {
 		setForm({ ...form, [e.target.name]: e.target.value });
@@ -34,10 +37,10 @@ export default function RegisterClient() {
 
 	return (
 		<div>
-			<div class="d-flex vh-100">
+			<div className="d-flex vh-100">
 				<AuthLayout />
-				<div class="w-50 align-items-center justify-content-center">
-					<div class="container px-5">
+				<div className="w-50 align-items-center justify-content-center">
+					<div className="container px-5">
 						<LinkInLoginsRegisters
 							text={t('registerClient.eresTester?')}
 							url="/register-tester"
@@ -51,7 +54,7 @@ export default function RegisterClient() {
 							classParent={"mb-5"}
 						/>
 						<div>
-							<h3 class="fw-bold fs-2 text-center mb-5">{t('general.yourestarting')}</h3>
+							<h3 className="fw-bold fs-2 text-center mb-5">{t('general.yourestarting')}</h3>
 						</div>
 						<div>
 							<form onSubmit={handleSubmit}>
@@ -70,29 +73,29 @@ export default function RegisterClient() {
 											<p>{t('registerClient.email')}:</p>
 											<input name="email" placeholder={`${t('registerClient.email')}...`} value={form.email} onChange={handleChange} required />
 										</div>
-										<div class="d-flex justify-content-end">
-											<button type="button" class="mt-5" onClick={nextStep}>{t('registerClient.siguiente')}</button>
+										<div className="d-flex justify-content-end">
+											<button type="button" className="mt-5" onClick={nextStep}>{t('registerClient.siguiente')}</button>
 										</div>
 									</>
 								)}
 								{step === 2 && (
 									<>
 										<h4>{t('registerClient.sobreTuEmpresa')}</h4>
-										<div class="mt-3">
+										<div className="mt-3">
 											<p>{t('registerClient.nombreEmpresa')}:</p>
 											<input name="companyName" placeholder={`${t('registerClient.nombreEmpresa')}...`} value={form.companyName} onChange={handleChange} required />
 										</div>
-										<div class="mt-3">
+										<div className="mt-3">
 											<p>{t('registerClient.direccionEmpresa')}:</p>
 											<input name="companyAddress" placeholder={`${t('registerClient.direccionEmpresa')}...`} value={form.companyAddress} onChange={handleChange} required />
 										</div>
-										<div class="mt-3">
+										<div className="mt-3">
 											<p>{t('registerClient.nif')}:</p>
 											<input name="companyId" placeholder={`${t('registerClient.nif')}...`} value={form.companyId} onChange={handleChange} required />
 										</div>
-										<div class="d-flex justify-content-between mt-3">
-											<button type="button" class="" onClick={prevStep}>{t('registerClient.atras')}</button>
-											<button type="submit" class="">{t('registerClient.enviar')}</button>
+										<div className="d-flex justify-content-between mt-3">
+											<button type="button" className="" onClick={prevStep}>{t('registerClient.atras')}</button>
+											<button type="submit" className="">{t('registerClient.enviar')}</button>
 										</div>
 									</>
 								)}
