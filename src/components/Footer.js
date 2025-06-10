@@ -13,11 +13,11 @@ const Footer = () => {
 		<footer className="footer">
 			<div className="footer-left">
 				<p className="brand">nextest by NEXO QA</p>
-				<a href="#soluciones">{t('footer.soluciones')}</a>
-				<a href="#contacto">{t('footer.contactanos')}</a>
+				<a href="login">{t('login.title')}</a>
+				<a href="dashboard-not">{t('dashboard.title')}</a>
 			</div>
 			<div className="footer-right">
-				<p>{t('footer.followUs')}</p>
+				<p>{t('footer.followUs')}:</p>
 				<a href="https://linkedin.com" target="_blank" rel="noreferrer">
 					<i className="fa fa-linkedin"></i> LinkedIn
 				</a>

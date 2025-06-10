@@ -64,7 +64,9 @@ export default function RecoverAccount() {
 									ref={recaptchaRef}
 								/>
 							</div>
-							<button className={`mt-3 ${!captchaVerified ? 'buttonDisabled' : ''}`} type="submit" disabled={!captchaVerified}>
+							<button className={`mt-3 ${!captchaVerified ? 'buttonDisabled' : ''}`}
+								title={`${!captchaVerified ? t('login.completeRecaptcha') : ''}`}
+								type="submit" disabled={!captchaVerified}>
 								{t('recoverAccount.enviarEnlace')}
 							</button>
 						</form>

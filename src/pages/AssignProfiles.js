@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Sidebar25 from '../components/Sidebar25';
 import Footer from '../components/Footer';
 import { usePageTitle } from '../hooks/usePageTitle';
+import { t } from 'i18next';
 
 export default function AssignProfiles() {
 	const [testers, setTesters] = useState([]);
@@ -36,7 +37,7 @@ export default function AssignProfiles() {
 				<Sidebar25 />
 				<div className="w-75 d-flex align-items-center justify-content-center mx-auto">
 					<div className="px-5">
-						<h2 className="mb-4">Asignar testers al proyecto</h2>
+						<h2 className="mb-4">{t('assignProfiles.asignarTesters')}</h2>
 						<form onSubmit={handleSubmit} className="adaptedForm">
 							<ul className="list-group">
 								{testers.map(tester => (
@@ -55,7 +56,7 @@ export default function AssignProfiles() {
 								))}
 							</ul>
 							<div className="d-flex justify-content-end mt-4">
-								<button type="submit" className="btn btn-dark text-uppercase">Asignar</button>
+								<button type="submit" className="btn btn-dark text-uppercase">{t('assignProfiles.asignar')}</button>
 							</div>
 						</form>
 					</div>
