@@ -205,7 +205,7 @@ export default function RegisterTester() {
 										</div>
 										<div className="d-flex justify-content-end mt-5">
 											<button type="button" onClick={prevStep}>Atrás</button>
-											<button type="submit">Finalizar</button>
+											<button type="submit" className="text-uppercase">Finalizar</button>
 										</div>
 									</>
 								)}

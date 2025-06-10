@@ -94,8 +94,8 @@ export default function RegisterClient() {
 											<input name="companyId" placeholder={`${t('registerClient.nif')}...`} value={form.companyId} onChange={handleChange} required />
 										</div>
 										<div className="d-flex justify-content-between mt-3">
-											<button type="button" className="" onClick={prevStep}>{t('registerClient.atras')}</button>
-											<button type="submit" className="">{t('registerClient.enviar')}</button>
+											<button type="button" className="text-uppercase" onClick={prevStep}>{t('registerClient.atras')}</button>
+											<button type="submit" className="text-uppercase">{t('registerClient.enviar')}</button>
 										</div>
 									</>
 								)}

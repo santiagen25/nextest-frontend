@@ -72,6 +72,12 @@
 		"crear": "Crear",
 		"title": "Crear Proyecto"
 	},
+	"configurateProject": {
+		"title": "Configurar Proyecto"
+	},
+	"assignProfiles": {
+		"title": "Asignar Perfiles"
+	},
 	"footer": {
 		"soluciones": "Soluciones",
 		"contactanos": "Contactanos",

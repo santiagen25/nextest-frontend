@@ -35,9 +35,9 @@ export default function CreateProject() {
 		<div>
 			<div className="d-flex vh-100">
 				<Sidebar25 />
-				<div className="w-75 align-items-center justify-content-center mx-auto">
-					<div className="container px-5">
-						<h3 className="fw-bold fs-2 text-center mb-5">{t('createProject.letsStartTesting')}</h3>
+				<div className="w-75 d-flex align-items-center justify-content-center mx-auto">
+					<div className="px-5">
+						<h3 className="mb-4">{t('createProject.letsStartTesting')}</h3>
 						<div className="d-flex justify-content-center">
 							<form className="adaptedForm" onSubmit={handleSubmit}>
 								<h4>{t('createProject.aboutProject')}</h4>
