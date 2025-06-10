@@ -5,7 +5,8 @@
 		"ingles": "English",
 		"español": "Spanish",
 		"catalan": "Catalan",
-		"yourestarting": "You're starting something new, let's make it a way of life ;-)"
+		"yourestarting": "You're starting something new, let's make it a way of life ;-)",
+		"ir": "go"
 	},
 	"login": {
 		"accedeatucuenta": "Login into your account",
@@ -17,7 +18,8 @@
 		"noTienesCuenta?": "Don't have an account?",
 		"resetpasswd": "Reset Password",
 		"registrarse": "Register",
-		"title": "Login"
+		"title": "Login",
+		"completeRecaptcha": "Please, complete the reCAPTCHA."
 	},
 	"recoverAccount": {
 		"tituloRecuperar": "Recover password",
@@ -30,7 +32,8 @@
 		"title": "Recover Account"
 	},
 	"dashboard": {
-		"bienvenido": "Welcome!"
+		"bienvenido": "Welcome!",
+		"title": "Dashboard"
 	},
 	"registerClient": {
 		"eresTester?": "Are you a Tester?",
@@ -54,7 +57,31 @@
 		"idiomas": "Languages",
 		"nacimiento": "Date of birth",
 		"dondeVives": "Where you're living",
-		"title": "Register Tester"
+		"title": "Register Tester",
+		"atras": "Previous",
+		"ciudad": "City",
+		"codigoPostal": "Postal Code",
+		"pais": "Country",
+		"tuExperiencia": "Your experience...",
+		"experiencia": "Experience",
+		"sinExperiencia": "Without experience",
+		"menosDe2Años": "Less than 2 years",
+		"3a5Años": "3 - 5",
+		"6a10Años": "6 - 10",
+		"masDe10Años": "More than 10 years",
+		"intereses": "Interests",
+		"enQueHerramientasEres": "What tools are you proficient",
+		"enQueIdiomasEres": "What languages are you proficient",
+		"herramientas": "Tools",
+		"testingManualYExploratorio": "Manual and Exploratory Testing",
+		"testingAutomatizado": "Automated Testing",
+		"testingIA": "IA Testing",
+		"testingCiber": "Cibersecurity Testing",
+		"testingRendi": "Profit Testing",
+		"testingApiMicro": "API / Microservices Testing",
+		"testingApps": "Mobile APP Testing",
+		"bdd": "(BDD) Behavior Driven Development",
+		"tdd": "(TDD) Test Driven Development"
 	},
 	"createProject": {
 		"letsStartTesting": "Let's get your testing underway!",
@@ -72,9 +99,25 @@
 		"crear": "Create",
 		"title": "Create Project"
 	},
+	"configurateProject": {
+		"title": "Configurate Project",
+		"configurarNuevoProyecto": "Configure new project",
+		"nombreProducto": "Name of the product",
+		"descripcionProducto": "Description of the product",
+		"entorno": "Environment",
+		"seleccionaEntorno": "Select an environment",
+		"test": "Test",
+		"produccion": "Production",
+		"preProduccion": "Pre-Production",
+		"urlEntorno": "URL of the environment",
+		"guardar": "Save"
+	},
+	"assignProfiles": {
+		"title": "Assign Profiles",
+		"asignarTesters": "Assign Testers to the project",
+		"asignar": "Assign"
+	},
 	"footer": {
-		"soluciones": "Solutions",
-		"contactanos": "Contact us",
 		"followUs": "Follow us"
 	}
 }

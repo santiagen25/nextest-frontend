@@ -1,9 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Footer from '../components/Footer';
+import LinkInLoginsRegisters from '../components/LinkInLoginsRegisters';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 export default function Dashboard() {
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
+
+	usePageTitle('dashboard.title');
 
 	return (
 		<div>
@@ -21,10 +25,33 @@ export default function Dashboard() {
 					</ul>
 				</div>
 
-				<div>
-					<button onClick={() => i18n.changeLanguage('en')}>{t('general.ingles')}</button>
-					<button onClick={() => i18n.changeLanguage('es')}>{t('general.español')}</button>
-					<button onClick={() => i18n.changeLanguage('ca')}>{t('general.catalan')}</button>
+				<div className="my-5">
+					<div className="d-flex justify-content-start">
+						<LinkInLoginsRegisters
+							text={t('createProject.title')}
+							url="/create-project"
+							linkText={t('general.ir')}
+							classParent={"mb-1"}
+						/>
+					</div>
+
+					<div className="d-flex justify-content-start">
+						<LinkInLoginsRegisters
+							text={t('configurateProject.title')}
+							url="/configurate-project"
+							linkText={t('general.ir')}
+							classParent={"mb-1"}
+						/>
+					</div>
+
+					<div className="d-flex justify-content-start">
+						<LinkInLoginsRegisters
+							text={t('assignProfiles.title')}
+							url="/assign-profiles"
+							linkText={t('general.ir')}
+							classParent={"mb-1"}
+						/>
+					</div>
 				</div>
 			</div>
 			<Footer />

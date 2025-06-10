@@ -37,7 +37,7 @@ export default function Login() {
 		}
 
 		if (!captchaVerified) {
-			return setError('Por favor, completa el reCAPTCHA.');
+			return setError(t('login.completeRecaptcha'));
 		}
 
 		const objectToSend = {
@@ -126,7 +126,9 @@ export default function Login() {
 								</div>
 
 								<div className="d-flex justify-content-end mt-4">
-									<button type="submit" disabled={!captchaVerified} className={`text-uppercase ${!captchaVerified ? 'buttonDisabled' : ''}`}>
+									<button type="submit" disabled={!captchaVerified}
+										className={`text-uppercase ${!captchaVerified ? 'buttonDisabled' : ''}`}
+										title={`${!captchaVerified ? t('login.completeRecaptcha') : ''}`}>
 										{t('login.entrar')}
 									</button>
 								</div>

@@ -69,15 +69,15 @@ export default function RegisterTester() {
 	};
 
 	const intereses = [
-		'Testing manual y exploratorio',
-		'Testing automatizado',
-		'Testing IA',
-		'Testing de ciberseguridad',
-		'Testing de rendimiento',
-		'Testing de API / microservicios',
-		'Testing de apps de móvil',
-		'Behavior Driven Development',
-		'Test Driven Development',
+		`${t('registerTester.testingManualYExploratorio')}`,
+		`${t('registerTester.testingAutomatizado')}`,
+		`${t('registerTester.testingIA')}`,
+		`${t('registerTester.testingCiber')}`,
+		`${t('registerTester.testingRendi')}`,
+		`${t('registerTester.testingApiMicro')}`,
+		`${t('registerTester.testingApps')}`,
+		`${t('registerTester.bdd')}`,
+		`${t('registerTester.tdd')}`
 	];
 
 	return (
@@ -127,7 +127,7 @@ export default function RegisterTester() {
 											<input name="email" type="date" placeholder={`${t('registerTester.nacimiento')}...`} value={form.email} onChange={handleChange} required />
 										</div>
 										<div className="d-flex justify-content-end">
-											<button type="button" className="mt-5 text-uppercase" onClick={nextStep}>{t('registerClient.next')}</button>
+											<button type="button" className="mt-5 text-uppercase" onClick={nextStep}>{t('registerClient.siguiente')}</button>
 										</div>
 									</>
 								)}
@@ -135,28 +135,28 @@ export default function RegisterTester() {
 									<>
 										<h4>{t('registerTester.dondeVives')}...</h4>
 										<div>
-											<p>City:</p>
+											<p>{t('registerTester.ciudad')}:</p>
 											<input name="name" placeholder="city..." value={form.name} onChange={handleChange} required />
 										</div>
 										<div>
-											<p>Post Code:</p>
+											<p>{t('registerTester.codigoPostal')}:</p>
 											<input name="lastName" placeholder="code..." value={form.lastName} onChange={handleChange} required />
 										</div>
 										<div>
-											<p>Contry:</p>
+											<p>{t('registerTester.pais')}:</p>
 											<input name="email" placeholder="Contry..." value={form.email} onChange={handleChange} required />
 										</div>
 										<div className="d-flex justify-content-end mt-5">
-											<button type="button" onClick={prevStep}>Back</button>
-											<button type="button" onClick={nextStep}>Next</button>
+											<button type="button" onClick={prevStep} className="text-uppercase">{t('registerTester.atras')}</button>
+											<button type="button" onClick={nextStep} className="text-uppercase">{t('registerClient.siguiente')}</button>
 										</div>
 									</>
 								)}
 								{step === 3 && (
 									<>
-										<h4>Your experience...</h4>
-										<label>Experiencia:</label><br />
-										{['Sin experiencia', 'Menos de 2 años', '3 – 5 años', '6 – 10 años', 'Más de 10 años'].map((exp) => (
+										<h4>{t('registerTester.tuExperiencia')}</h4>
+										<label>{t('registerTester.experiencia')}:</label>
+										{[`${t('registerTester.sinExperiencia')}`, `${t('registerTester.menosDe2Años')}`, `${t('registerTester.3a5Años')}`, `${t('registerTester.6a10Años')}`, `${t('registerTester.masDe10Años')}`].map((exp) => (
 											<div className="form-check" key={exp}>
 												<label className="form-check-label">
 													<input
@@ -170,16 +170,16 @@ export default function RegisterTester() {
 													{exp}
 												</label>
 											</div>
-										))}<br />
+										))}
 										<div className="d-flex justify-content-end mt-5">
-											<button type="button" onClick={prevStep}>Atrás</button>
-											<button type="button" onClick={nextStep}>Siguiente</button>
+											<button type="button" onClick={prevStep} className="text-uppercase">{t('registerTester.atras')}</button>
+											<button type="button" onClick={nextStep} className="text-uppercase">{t('registerClient.siguiente')}</button>
 										</div>
 									</>
 								)}
 								{step === 4 && (
 									<>
-										<label>Intereses:</label><br />
+										<label>{t('registerTester.intereses')}:</label>
 										{intereses.map((item) => (
 											<div className="form-check" key={item}>
 												<input
@@ -196,16 +196,16 @@ export default function RegisterTester() {
 										))}
 
 										<div className="mt-3">
-											<p>What tools are you proficient?</p>
-											<textarea type="text" name="herramientas" placeholder="Tools..." value={form.name} onChange={handleChange} required></textarea>
+											<p>{t('registerTester.enQueHerramientasEres')}</p>
+											<textarea type="text" name="herramientas" placeholder={`${t('registerTester.herramientas')}...`} value={form.name} onChange={handleChange} required></textarea>
 										</div>
 										<div className="mt-3">
-											<p>What languages are you proficient?</p>
-											<textarea type="text" name="lenguajes" placeholder="Tools..." value={form.name} onChange={handleChange} required></textarea>
+											<p>{t('registerTester.enQueIdiomasEres')}</p>
+											<textarea type="text" name="lenguajes" placeholder={`${t('registerTester.herramientas')}...`} value={form.name} onChange={handleChange} required></textarea>
 										</div>
 										<div className="d-flex justify-content-end mt-5">
-											<button type="button" onClick={prevStep}>Atrás</button>
-											<button type="submit">Finalizar</button>
+											<button type="button" onClick={prevStep} className="text-uppercase">{t('registerTester.atras')}</button>
+											<button type="submit" className="text-uppercase">{t('registerClient.enviar')}</button>
 										</div>
 									</>
 								)}

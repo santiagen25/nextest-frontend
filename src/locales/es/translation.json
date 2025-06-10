@@ -5,7 +5,8 @@
 		"ingles": "Inglés",
 		"español": "Español",
 		"catalan": "Catalán",
-		"yourestarting": "Estás empezando algo nuevo, hagámoslo parte de tu estilo de vida ;-)"
+		"yourestarting": "Estás empezando algo nuevo, hagámoslo parte de tu estilo de vida ;-)",
+		"ir": "ir"
 	},
 	"login": {
 		"accedeatucuenta": "Accede a tu cuenta",
@@ -17,7 +18,8 @@
 		"noTienesCuenta?": "¿No tienes cuenta?",
 		"resetpasswd": "Resetear contraseña",
 		"registrarse": "Registrarse",
-		"title": "Login"
+		"title": "Login",
+		"completeRecaptcha": "Por favor, completa el reCAPTCHA."
 	},
 	"recoverAccount": {
 		"tituloRecuperar": "Recuperar contraseña",
@@ -30,7 +32,8 @@
 		"title": "Recuperar Cuenta"
 	},
 	"dashboard": {
-		"bienvenido": "¡Bienvenido!"
+		"bienvenido": "¡Bienvenido!",
+		"title": "Dashboard"
 	},
 	"registerClient": {
 		"eresTester?": "¿Eres un Tester?",
@@ -54,7 +57,31 @@
 		"idiomas": "Idiomas",
 		"nacimiento": "Fecha de nacimiento",
 		"dondeVives": "Donde estás viviendo",
-		"title": "Registrar Tester"
+		"title": "Registrar Tester",
+		"atras": "Atrás",
+		"ciudad": "Ciudad",
+		"codigoPostal": "Código Postal",
+		"pais": "País",
+		"tuExperiencia": "Tu experiencia...",
+		"experiencia": "Experiencia",
+		"sinExperiencia": "Sin experiencia",
+		"menosDe2Años": "Menos de 2 años",
+		"3a5Años": "3 - 5",
+		"6a10Años": "6 - 10",
+		"masDe10Años": "Mas de 10 años",
+		"intereses": "Intereses",
+		"enQueHerramientasEres": "En que herramientas eres bueno",
+		"enQueIdiomasEres": "En que idiomas eres bueno",
+		"herramientas": "Herramientas",
+		"testingManualYExploratorio": "Testing manual y exploratorio",
+		"testingAutomatizado": "Testing automatizado",
+		"testingIA": "Testing IA",
+		"testingCiber": "Testing de Ciberseguridad",
+		"testingRendi": "Testing de Rendimiento",
+		"testingApiMicro": "Testing de API / Microservicios",
+		"testingApps": "Testing de apps de móvil",
+		"bdd": "(BDD) Test orientado a comportamiento",
+		"tdd": "(TDD) Test orientado a desarrollo"
 	},
 	"createProject": {
 		"letsStartTesting": "¡Vamos a poner en marcha tu Testing!",
@@ -72,9 +99,25 @@
 		"crear": "Crear",
 		"title": "Crear Proyecto"
 	},
+	"configurateProject": {
+		"title": "Configurar Proyecto",
+		"configurarNuevoProyecto": "Configurar nuevo proyecto",
+		"nombreProducto": "Nombre del producto",
+		"descripcionProducto": "Descripción del producto",
+		"entorno": "Entorno",
+		"seleccionaEntorno": "Selecciona un entorno",
+		"test": "Test",
+		"produccion": "Producción",
+		"preProduccion": "Pre-Producción",
+		"urlEntorno": "URL del entorno",
+		"guardar": "Guardar"
+	},
+	"assignProfiles": {
+		"title": "Asignar Perfiles",
+		"asignarTesters": "Asignar Testers al proyecto",
+		"asignar": "Asignar"
+	},
 	"footer": {
-		"soluciones": "Soluciones",
-		"contactanos": "Contactanos",
 		"followUs": "Siguenos"
 	}
 }
