@@ -112,6 +112,31 @@
 		"urlEntorno": "URL of the environment",
 		"guardar": "Save"
 	},
+	"editClient": {
+		"title": "Edit profile",
+		"personalInfo": "Personal information",
+		"guardarCambios": "Save changes",
+		"success": "Profile updated succesfully",
+		"error": "Error updating the profile"
+	},
+	"TestingProcess": {
+		"title": "Testing process"
+	},
+	"TestRepository": {
+		"title": "Test repository"
+	},
+	"TestPlans": {
+		"title": "Test plans"
+	},
+	"TestWithSteps": {
+		"title": "Test with steps"
+	},
+	"TestWithoutSteps": {
+		"title": "Test without steps"
+	},
+	"ExploratoryTest": {
+		"title": "Exploratory Test"
+	},
 	"assignProfiles": {
 		"title": "Assign Profiles",
 		"asignarTesters": "Assign Testers to the project",

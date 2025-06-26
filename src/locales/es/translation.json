@@ -112,6 +112,31 @@
 		"urlEntorno": "URL del entorno",
 		"guardar": "Guardar"
 	},
+	"editClient": {
+		"title": "Editar perfil",
+		"personalInfo": "Información personal",
+		"guardarCambios": "Guardar cambios",
+		"success": "Perfil actualizado con éxito",
+		"error": "Error al actualizar el perfil"
+	},
+	"TestingProcess": {
+		"title": "Proceso de Testing"
+	},
+	"TestRepository": {
+		"title": "Repositorio de Test"
+	},
+	"TestPlans": {
+		"title": "Plan de Test"
+	},
+	"TestWithSteps": {
+		"title": "Test con paso"
+	},
+	"TestWithoutSteps": {
+		"title": "Test sin pasos"
+	},
+	"ExploratoryTest": {
+		"title": "Test exploratorio"
+	},
 	"assignProfiles": {
 		"title": "Asignar Perfiles",
 		"asignarTesters": "Asignar Testers al proyecto",

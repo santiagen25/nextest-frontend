@@ -52,6 +52,60 @@ export default function Dashboard() {
 							classParent={"mb-1"}
 						/>
 					</div>
+
+					<div className="d-flex justify-content-start">
+						<LinkInLoginsRegisters
+							text={t('TestingProcess.title')}
+							url="/testing-process"
+							linkText={t('general.ir')}
+							classParent={"mb-1"}
+						/>
+					</div>
+
+					<div className="d-flex justify-content-start">
+						<LinkInLoginsRegisters
+							text={t('TestRepository.title')}
+							url="/test-repository"
+							linkText={t('general.ir')}
+							classParent={"mb-1"}
+						/>
+					</div>
+
+					<div className="d-flex justify-content-start">
+						<LinkInLoginsRegisters
+							text={t('TestPlans.title')}
+							url="/test-plans"
+							linkText={t('general.ir')}
+							classParent={"mb-1"}
+						/>
+					</div>
+
+					<div className="d-flex justify-content-start">
+						<LinkInLoginsRegisters
+							text={t('TestWithSteps.title')}
+							url="/test-with-steps"
+							linkText={t('general.ir')}
+							classParent={"mb-1"}
+						/>
+					</div>
+
+					<div className="d-flex justify-content-start">
+						<LinkInLoginsRegisters
+							text={t('TestWithoutSteps.title')}
+							url="/test-without-steps"
+							linkText={t('general.ir')}
+							classParent={"mb-1"}
+						/>
+					</div>
+
+					<div className="d-flex justify-content-start">
+						<LinkInLoginsRegisters
+							text={t('ExploratoryTest.title')}
+							url="/exploratory-test-form"
+							linkText={t('general.ir')}
+							classParent={"mb-1"}
+						/>
+					</div>
 				</div>
 			</div>
 			<Footer />
