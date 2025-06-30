@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function SidebarTest25() {
 	return (
-		<div className="w-25 bg-dark text-white vh-100 d-flex flex-column align-items-center pt-4">
+		<div className="w-25 bg-dark text-white min-vh-100 d-flex flex-column align-items-center pt-4">
 			{/* Logo */}
 			<Link to="/dashboard" className="mb-5 text-decoration-none">
 				<h2 className="fw-bold" style={{ cursor: 'pointer' }}>

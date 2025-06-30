@@ -106,25 +106,25 @@ export default function RegisterTester() {
 								{step === 1 && (
 									<>
 										<h4>{t('registerClient.aboutYourself')}</h4>
-										<div>
-											<p>{t('registerClient.nombre')}:</p>
-											<input name="name" placeholder={`${t('registerClient.nombre')}...`} value={form.name} onChange={handleChange} required />
+										<div className="mb-3">
+											<label className="form-label">{t('registerClient.nombre')}:</label>
+											<input className="form-control" name="name" placeholder={`${t('registerClient.nombre')}...`} value={form.name} onChange={handleChange} required />
 										</div>
-										<div>
-											<p>{t('registerClient.apellidos')}:</p>
-											<input name="lastName" placeholder={`${t('registerClient.apellidos')}...`} value={form.lastName} onChange={handleChange} required />
+										<div className="mb-3">
+											<label className="form-label">{t('registerClient.apellidos')}:</label>
+											<input className="form-control" name="lastName" placeholder={`${t('registerClient.apellidos')}...`} value={form.lastName} onChange={handleChange} required />
 										</div>
-										<div>
-											<p>{t('registerClient.email')}:</p>
-											<input name="email" placeholder={`${t('registerClient.email')}...`} value={form.email} onChange={handleChange} required />
+										<div className="mb-3">
+											<label className="form-label">{t('registerClient.email')}:</label>
+											<input className="form-control" name="email" placeholder={`${t('registerClient.email')}...`} value={form.email} onChange={handleChange} required />
 										</div>
-										<div>
-											<p>{t('registerTester.idiomas')}:</p>
-											<input name="email" placeholder={`${t('registerTester.idiomas')}...`} value={form.email} onChange={handleChange} required />
+										<div className="mb-3">
+											<label className="form-label">{t('registerTester.idiomas')}:</label>
+											<input className="form-control" name="email" placeholder={`${t('registerTester.idiomas')}...`} value={form.email} onChange={handleChange} required />
 										</div>
-										<div>
-											<p>{t('registerTester.nacimiento')}:</p>
-											<input name="email" type="date" placeholder={`${t('registerTester.nacimiento')}...`} value={form.email} onChange={handleChange} required />
+										<div className="mb-3">
+											<label className="form-label">{t('registerTester.nacimiento')}:</label>
+											<input className="form-control" name="email" type="date" placeholder={`${t('registerTester.nacimiento')}...`} value={form.email} onChange={handleChange} required />
 										</div>
 										<div className="d-flex justify-content-end">
 											<button type="button" className="mt-5 text-uppercase" onClick={nextStep}>{t('registerClient.siguiente')}</button>
@@ -135,16 +135,16 @@ export default function RegisterTester() {
 									<>
 										<h4>{t('registerTester.dondeVives')}...</h4>
 										<div>
-											<p>{t('registerTester.ciudad')}:</p>
-											<input name="name" placeholder="city..." value={form.name} onChange={handleChange} required />
+											<label className="form-label">{t('registerTester.ciudad')}:</label>
+											<input className="form-control" name="name" placeholder="city..." value={form.name} onChange={handleChange} required />
 										</div>
 										<div>
-											<p>{t('registerTester.codigoPostal')}:</p>
-											<input name="lastName" placeholder="code..." value={form.lastName} onChange={handleChange} required />
+											<label className="form-label">{t('registerTester.codigoPostal')}:</label>
+											<input className="form-control" name="lastName" placeholder="code..." value={form.lastName} onChange={handleChange} required />
 										</div>
 										<div>
-											<p>{t('registerTester.pais')}:</p>
-											<input name="email" placeholder="Contry..." value={form.email} onChange={handleChange} required />
+											<label className="form-label">{t('registerTester.pais')}:</label>
+											<input className="form-control" name="email" placeholder="Contry..." value={form.email} onChange={handleChange} required />
 										</div>
 										<div className="d-flex justify-content-end mt-5">
 											<button type="button" onClick={prevStep} className="text-uppercase">{t('registerTester.atras')}</button>
@@ -179,7 +179,7 @@ export default function RegisterTester() {
 								)}
 								{step === 4 && (
 									<>
-										<label>{t('registerTester.intereses')}:</label>
+										<label className="form-check-label">{t('registerTester.intereses')}:</label>
 										{intereses.map((item) => (
 											<div className="form-check" key={item}>
 												<input
@@ -196,12 +196,12 @@ export default function RegisterTester() {
 										))}
 
 										<div className="mt-3">
-											<p>{t('registerTester.enQueHerramientasEres')}</p>
-											<textarea type="text" name="herramientas" placeholder={`${t('registerTester.herramientas')}...`} value={form.name} onChange={handleChange} required></textarea>
+											<label className="form-label">{t('registerTester.enQueHerramientasEres')}</label>
+											<textarea className="form-control" type="text" name="herramientas" placeholder={`${t('registerTester.herramientas')}...`} value={form.name} onChange={handleChange} required></textarea>
 										</div>
 										<div className="mt-3">
-											<p>{t('registerTester.enQueIdiomasEres')}</p>
-											<textarea type="text" name="lenguajes" placeholder={`${t('registerTester.herramientas')}...`} value={form.name} onChange={handleChange} required></textarea>
+											<label className="form-label">{t('registerTester.enQueIdiomasEres')}</label>
+											<textarea className="form-control" type="text" name="lenguajes" placeholder={`${t('registerTester.herramientas')}...`} value={form.name} onChange={handleChange} required></textarea>
 										</div>
 										<div className="d-flex justify-content-end mt-5">
 											<button type="button" onClick={prevStep} className="text-uppercase">{t('registerTester.atras')}</button>

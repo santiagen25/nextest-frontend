@@ -129,13 +129,13 @@
 		"title": "Plan de Test"
 	},
 	"TestWithSteps": {
-		"title": "Test con paso"
+		"title": "Diseño de pruebas con pasos"
 	},
 	"TestWithoutSteps": {
-		"title": "Test sin pasos"
+		"title": "Diseño de pruebas sin pasos"
 	},
 	"ExploratoryTest": {
-		"title": "Test exploratorio"
+		"title": "Diseño de prueba exploratoria"
 	},
 	"assignProfiles": {
 		"title": "Asignar Perfiles",

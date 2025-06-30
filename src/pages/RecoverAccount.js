@@ -55,8 +55,8 @@ export default function RecoverAccount() {
 					<div className="text-center">
 						<h2>{t('recoverAccount.tituloRecuperar')}</h2>
 						<form onSubmit={handleSubmit}>
-							<label className="mt-5 mb-1">{t('recoverAccount.introduceEmail')}:</label>
-							<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+							<label className="form-label mt-5 mb-1">{t('recoverAccount.introduceEmail')}:</label>
+							<input className="form-control" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
 							<div className="d-flex justify-content-center mt-3">
 								<ReCAPTCHA
 									sitekey="6LdCp1YrAAAAAK8qv6EJpVFnMDyREBsUh6mOZvzq"

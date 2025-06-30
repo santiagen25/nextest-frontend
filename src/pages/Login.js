@@ -76,8 +76,9 @@ export default function Login() {
 								<h4>{t('login.accedeatucuenta')}</h4>
 
 								<div className="mt-3">
-									<label>{t('login.email')}:</label>
+									<label className="form-label">{t('login.email')}:</label>
 									<input
+										className="form-control"
 										type="email"
 										name="email"
 										required
@@ -87,8 +88,9 @@ export default function Login() {
 								</div>
 
 								<div className="mt-3">
-									<label>{t('login.passwd')}:</label>
+									<label className="form-label">{t('login.passwd')}:</label>
 									<input
+										className="form-control"
 										type="password"
 										name="password"
 										required

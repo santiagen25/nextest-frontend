@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import { usePageTitle } from '../hooks/usePageTitle';
 import SidebarTest25 from '../components/SidebarTest25';
+import { t } from 'i18next';
 
 export default function TestRepository() {
 	usePageTitle('Repositorio de Pruebas');
@@ -28,7 +29,9 @@ export default function TestRepository() {
 					<h2>Repositorio de pruebas</h2>
 
 					<div className="d-flex gap-3 mt-4 mb-4">
+						<label className="form-label">{t('nom')}:</label>
 						<input
+							className="form-control"
 							type="text"
 							placeholder="Nombre de carpeta..."
 							value={newFolder}
