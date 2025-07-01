@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { usePageTitle } from '../hooks/usePageTitle';
 import { t } from 'i18next';
 import EditableTest from '../components/EditableTest';
+import { FaSearch } from 'react-icons/fa';
 
 export default function TestPlans() {
 	usePageTitle('Planes de prueba');
@@ -28,7 +29,6 @@ export default function TestPlans() {
 	const normalize = (text) =>
 		text.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
 
-	// Simulamos pruebas disponibles en el repositorio
 	const sampleTests = [
 		{ name: 'Login funcional', type: 'funcional' },
 		{ name: 'Carga masiva', type: 'rendimiento' },
@@ -91,26 +91,32 @@ export default function TestPlans() {
 				<div className="w-100 p-5">
 					<h2>Planes de prueba</h2>
 
-					<div className="gap-3 mt-4 mb-4">
+					<div className="input-group w-50 mt-4 mb-4">
 						<input
-							className="form-control"
 							type="text"
+							className="form-control"
 							placeholder="Nombre del plan..."
 							value={planName}
 							onChange={(e) => setPlanName(e.target.value)}
 						/>
-						<button className="mt-4" onClick={handleAddPlan}>Crear plan</button>
+						<button className="btn btn-dark btn-sm" onClick={handleAddPlan}>
+							Crear plan
+						</button>
 					</div>
 
 					<div className="mt-4 mt-5 mb-4">
-						<label className="form-label">{t('Buscador')}:</label>
-						<input
-							type="text"
-							placeholder="Buscar prueba por nombre o tipo..."
-							className="form-control w-50"
-							value={search}
-							onChange={(e) => setSearch(e.target.value)}
-						/>
+						<div className="input-group w-50">
+							<span className="input-group-text">
+								<FaSearch />
+							</span>
+							<input
+								type="text"
+								placeholder="Buscar prueba por nombre o tipo..."
+								className="form-control"
+								value={search}
+								onChange={(e) => setSearch(e.target.value)}
+							/>
+						</div>
 					</div>
 
 					{filteredPlans.map((plan, i) => (

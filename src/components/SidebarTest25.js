@@ -16,7 +16,7 @@ export default function SidebarTest25() {
 			{/* Tester Info Box */}
 			<div className="bg-secondary rounded p-3 text-center w-75 mb-4">
 				<FaUserCheck size={32} className="mb-2" />
-				<div className="small">TESTER: Juanita QA</div>
+				<div className="small">TESTER: Santiago Torrabadella</div>
 				<div className="small">Especialidad: Funcional</div>
 				<div className="small">Nivel: Senior</div>
 				<div className="small">Certif: ISTQB</div>

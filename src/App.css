@@ -35,7 +35,7 @@ textarea {
 	box-sizing: border-box;
 }
 
-button {
+button, button.btn, button.btn-dark{
 	padding: 0.75rem 1.5rem;
 	color: black;
 	font-size: 1rem;
@@ -44,6 +44,21 @@ button {
 	border-radius: 5px !important;
 	cursor: pointer;
 	transition: background 0.3s ease;
+}
+
+button.btn-danger {
+	color: red;
+	border: 1px solid red;
+}
+
+button.btn-primary {
+	color: blue;
+	border: 1px solid blue;
+}
+
+button.btn-success {
+	color: green;
+	border: 1px solid green;
 }
 
 button:hover {

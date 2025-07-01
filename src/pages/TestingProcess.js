@@ -5,6 +5,8 @@ import TestRepository from './TestRepository';
 import TestPlans from './TestPlans';
 import Execution from './ExploratoryTestForm';
 import DashboardTest from './DashboardTest';
+import Summary from './Summary';
+import TestExecution from './TestExecution';
 
 export default function TestingProcess() {
 	const [activeTab, setActiveTab] = useState('Dashboard');
@@ -13,8 +15,8 @@ export default function TestingProcess() {
 		{ name: 'Dashboard', component: <DashboardTest /> },
 		{ name: 'Repositorio de pruebas', component: <TestRepository /> },
 		{ name: 'Planes de prueba', component: <TestPlans /> },
-		{ name: 'Ejecución de pruebas', component: <Execution /> },
-		{ name: 'Cuadro de Mando', component: <Execution /> }
+		{ name: 'Ejecución de pruebas', component: <TestExecution /> },
+		{ name: 'Cuadro de Mando', component: <Summary /> }
 	];
 
 	return (
