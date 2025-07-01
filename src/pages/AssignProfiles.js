@@ -56,7 +56,7 @@ export default function AssignProfiles() {
 								))}
 							</ul>
 							<div className="d-flex justify-content-end mt-4">
-								<button type="submit" className="btn btn-dark text-uppercase">{t('assignProfiles.asignar')}</button>
+								<button type="submit" className="text-uppercase">{t('assignProfiles.asignar')}</button>
 							</div>
 						</form>
 					</div>

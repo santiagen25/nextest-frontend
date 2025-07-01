@@ -42,31 +42,31 @@ export default function CreateProject() {
 							<form className="adaptedForm" onSubmit={handleSubmit}>
 								<h4>{t('createProject.aboutProject')}</h4>
 								<div>
-									<p className="mt-5 mb-0">{t('createProject.projectName')}:</p>
-									<input name="projectName" value={form.projectName} onChange={handleChange} required />
+									<label className="form-label mt-5 mb-0">{t('createProject.projectName')}:</label>
+									<input className="form-control" name="projectName" value={form.projectName} onChange={handleChange} required />
 								</div>
 								<div>
-									<p className="mt-3 mb-0">{t('createProject.descripcion')}:</p>
-									<input name="description" value={form.description} onChange={handleChange} required />
+									<label className="form-label mt-3 mb-0">{t('createProject.descripcion')}:</label>
+									<input className="form-control" name="description" value={form.description} onChange={handleChange} required />
 								</div>
 								<div>
-									<p className="mt-3 mb-0">{t('createProject.email')}:</p>
-									<input name="email" value={form.email} onChange={handleChange} required />
+									<label className="form-label mt-3 mb-0">{t('createProject.email')}:</label>
+									<input className="form-control" name="email" value={form.email} onChange={handleChange} required />
 								</div>
 								<div>
-									<p className="mt-3 mb-0">{t('createProject.producto')}:</p>
-									<input name="product" value={form.product} onChange={handleChange} required />
+									<label className="form-label mt-3 mb-0">{t('createProject.producto')}:</label>
+									<input className="form-control" name="product" value={form.product} onChange={handleChange} required />
 								</div>
 								<div>
-									<p className="mt-3 mb-0">{t('createProject.fechaInicio')}:</p>
-									<input type="date" name="startDate" value={form.startDate} onChange={handleChange} required />
+									<label className="form-label mt-3 mb-0">{t('createProject.fechaInicio')}:</label>
+									<input className="form-control" type="date" name="startDate" value={form.startDate} onChange={handleChange} required />
 								</div>
 								<div>
-									<p className="mt-3 mb-0">{t('createProject.fechaFin')}:</p>
-									<input type="date" name="endDate" value={form.endDate} onChange={handleChange} required />
+									<label className="form-label mt-3 mb-0">{t('createProject.fechaFin')}:</label>
+									<input className="form-control" type="date" name="endDate" value={form.endDate} onChange={handleChange} required />
 								</div>
 								<div>
-									<p className="mt-3 mb-0">{t('createProject.TipoTest')}:</p>
+									<label className="form-label mt-3 mb-0">{t('createProject.TipoTest')}:</label>
 									<select className="form-select form-select-lg" name="testType" value={form.testType} onChange={handleChange} required>
 										<option value="" disabled>{t('createProject.seleccionaTipo')}</option>
 										<option value="manual">{t('createProject.manual')}</option>

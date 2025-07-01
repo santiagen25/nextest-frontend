@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import { usePageTitle } from '../hooks/usePageTitle';
-import SidebarTest25 from '../components/SidebarTest25';
 import { t } from 'i18next';
 
 export default function TestRepository() {
@@ -24,7 +23,6 @@ export default function TestRepository() {
 	return (
 		<div>
 			<div className="d-flex vh-100">
-				<SidebarTest25 />
 				<div className="w-100 p-5">
 					<h2>Repositorio de pruebas</h2>
 
@@ -57,7 +55,6 @@ export default function TestRepository() {
 					</ul>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 }

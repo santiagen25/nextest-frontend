@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import { usePageTitle } from '../hooks/usePageTitle';
-import SidebarTest25 from '../components/SidebarTest25';
 import { t } from 'i18next';
 
 export default function ExploratoryTestForm() {
@@ -35,19 +34,18 @@ export default function ExploratoryTestForm() {
 	return (
 		<div>
 			<div className="d-flex vh-100">
-				<SidebarTest25 />
 				<div className="w-100 p-5">
 					<h2>{t('ExploratoryTest.title')}</h2>
 
 					<form onSubmit={handleSubmit}>
 						<input className="form-control mb-3" name="titulo" placeholder="Título" value={form.titulo} onChange={handleChange} required />
 						<input className="form-control mb-3" name="descripcion" placeholder="Descripción" value={form.descripcion} onChange={handleChange} required />
-						<select className="form-select mb-3" name="tipo" value={form.tipo} onChange={handleChange} required>
+						<select className="form-select form-select-lg mb-3" name="tipo" value={form.tipo} onChange={handleChange} required>
 							<option value="">Tipo de prueba</option>
 							<option value="exploratoria">Exploratoria</option>
 							<option value="funcional">Funcional</option>
 						</select>
-						<select className="form-select mb-3" name="prioridad" value={form.prioridad} onChange={handleChange} required>
+						<select className="form-select form-select-lg mb-3" name="prioridad" value={form.prioridad} onChange={handleChange} required>
 							<option value="">Prioridad</option>
 							<option value="alta">Alta</option>
 							<option value="media">Media</option>
@@ -63,7 +61,7 @@ export default function ExploratoryTestForm() {
 								Regresión
 							</label>
 						</div>
-						<select className="form-select mb-3" name="plan" value={form.plan} onChange={handleChange} required>
+						<select className="form-select form-select-lg mb-3" name="plan" value={form.plan} onChange={handleChange} required>
 							<option value="">Plan de prueba</option>
 							<option value="Plan A">Plan A</option>
 							<option value="Plan B">Plan B</option>
