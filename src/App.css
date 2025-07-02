@@ -35,7 +35,9 @@ textarea {
 	box-sizing: border-box;
 }
 
-button, button.btn, button.btn-dark{
+button,
+button.btn,
+button.btn-dark {
 	padding: 0.75rem 1.5rem;
 	color: black;
 	font-size: 1rem;
@@ -104,6 +106,13 @@ form.adaptedForm {
 		margin-bottom: 1rem;
 	}
 }
+
+@media (max-width: 1024px) {
+	.flex-md-nowrap {
+		flex-direction: column !important;
+	}
+}
+
 
 @media (min-width: 481px) and (max-width: 768px) {
 	.container {
