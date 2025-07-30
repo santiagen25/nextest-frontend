@@ -89,6 +89,19 @@ form.adaptedForm {
 	min-height: 100vh;
 }
 
+.sidebar-transition {
+	transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-hidden {
+	transform: translateX(-100%);
+}
+
+.sidebar-visible {
+	transform: translateX(0);
+}
+
+
 /* --- Responsive zone --- */
 
 @media (max-width: 480px) {

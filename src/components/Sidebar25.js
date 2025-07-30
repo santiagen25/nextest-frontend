@@ -1,30 +1,37 @@
-import React from 'react';
-import { FaIdBadge, FaUser } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { FaBars } from 'react-icons/fa';
+import SidebarContent from './SidebarContent';
 
 export default function Sidebar25() {
+	const [isOpen, setIsOpen] = useState(false);
+	const toggleSidebar = () => setIsOpen(!isOpen);
+
 	return (
-		<div className="w-25 bg-dark text-white vh-100 d-flex flex-column align-items-center pt-4">
-			{/* Logo */}
-			<Link to="/dashboard" className="mb-5 text-decoration-none">
-				<h2 className="fw-bold" style={{ cursor: 'pointer' }}>
-					<span style={{ color: '#ccc' }}>nextest</span>
-					<span style={{ color: '#b0e622' }}>.io</span>
-				</h2>
-			</Link>
+		<>
+			{/* Botón hamburguesa para móviles */}
+			<button
+				className="btn btn-dark d-md-none position-absolute m-2"
+				style={{ zIndex: 1100, width: 'auto' }}
+				onClick={toggleSidebar}
+			>
+				<FaBars />
+			</button>
 
-			{/* User Info Box */}
-			<div className="bg-secondary rounded p-3 text-center w-75 mb-4">
-				<FaUser size={32} className="mb-2" />
-				<div className="small">COMPANY NAME</div>
-				<div className="small">USER ID NAME</div>
+			{/* Sidebar móvil */}
+			<div
+				className={`bg-dark text-white vh-100 d-flex flex-column align-items-center pt-4
+					position-absolute start-0 w-75 d-md-none sidebar-transition
+					${isOpen ? 'sidebar-visible' : 'sidebar-hidden'}
+				`}
+				style={{ zIndex: 1000 }}
+			>
+				<SidebarContent />
 			</div>
 
-			{/* Menu Option */}
-			<div className="d-flex align-items-center gap-2 w-75 px-2 py-2 bg-black rounded">
-				<FaIdBadge />
-				<span>Company Profile</span>
+			{/* Sidebar escritorio */}
+			<div className="d-none d-md-flex w-25 bg-dark text-white vh-100 flex-column align-items-center pt-4 position-relative">
+				<SidebarContent />
 			</div>
-		</div>
+		</>
 	);
 }
