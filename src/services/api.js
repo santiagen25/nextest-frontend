@@ -1,14 +1,14 @@
 import axios from 'axios';
 
 export const apiFuncional = axios.create({
-	baseURL: 'http://92.205.178.174:3010',
+	baseURL: 'https://mdas.com.es/',
 });
 
 export const apiLogin = axios.create({
-	baseURL: 'https://mdas.com.es',
+	baseURL: 'https://mdas.com.es/login',
 });
 
 export const apiCreateProject = axios.create({
-	baseURL: 'http://92.205.178.174:3011',
+	baseURL: 'https://mdas.com.es/api8080/',
 });
 
