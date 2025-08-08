@@ -47,7 +47,7 @@ export default function TestWithSteps() {
 		<div>
 			<div className="d-flex min-vh-100">
 				<SidebarTest25 />
-				<div className="w-100 p-5">
+				<div className="w-100 p-5 mt-5 mt-md-0">
 					<h2>{t('TestWithSteps.title')}</h2>
 
 					<form onSubmit={handleSubmit}>

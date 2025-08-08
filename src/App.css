@@ -101,6 +101,10 @@ form.adaptedForm {
 	transform: translateX(0);
 }
 
+.padding-for-sidebar {
+	padding-top: 5em;
+}
+
 
 /* --- Responsive zone --- */
 

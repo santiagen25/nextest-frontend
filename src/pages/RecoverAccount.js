@@ -51,7 +51,7 @@ export default function RecoverAccount() {
 		<div>
 			<div className="d-flex vh-100">
 				<AuthLayout />
-				<div className="w-50 vh-100 d-flex justify-content-center align-items-center">
+				<div className="flex-fill d-flex align-items-center justify-content-center">
 					<div className="text-center">
 						<h2>{t('recoverAccount.tituloRecuperar')}</h2>
 						<form onSubmit={handleSubmit}>

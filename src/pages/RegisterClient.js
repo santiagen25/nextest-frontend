@@ -39,7 +39,7 @@ export default function RegisterClient() {
 		<div>
 			<div className="d-flex vh-100">
 				<AuthLayout />
-				<div className="w-50 align-items-center justify-content-center">
+				<div className="flex-fill d-flex align-items-center justify-content-center">
 					<div className="container px-5">
 						<LinkInLoginsRegisters
 							text={t('registerClient.eresTester?')}

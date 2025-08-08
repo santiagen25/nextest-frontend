@@ -12,8 +12,7 @@ export default function Sidebar25() {
 			<button
 				className="btn btn-dark d-md-none position-absolute m-2"
 				style={{ zIndex: 1100, width: 'auto' }}
-				onClick={toggleSidebar}
-			>
+				onClick={toggleSidebar}>
 				<FaBars />
 			</button>
 
@@ -23,8 +22,7 @@ export default function Sidebar25() {
 					position-absolute start-0 w-75 d-md-none sidebar-transition
 					${isOpen ? 'sidebar-visible' : 'sidebar-hidden'}
 				`}
-				style={{ zIndex: 1000 }}
-			>
+				style={{ zIndex: 1000 }}>
 				<SidebarContent />
 			</div>
 
