@@ -19,13 +19,16 @@ export default function TestingProcess() {
 	];
 
 	return (
-		<div>
-			<div className="d-flex min-vh-100">
-				<SidebarTest25 />
-				<div className="w-100 p-5">
+		<div className="d-flex flex-column min-vh-100">
+			<div className="d-flex flex-grow-1 align-items-stretch">
+				<div className="d-none d-md-flex w-25 bg-dark text-white flex-column">
+					<SidebarTest25 />
+				</div>
+				<main className="flex-grow-1 p-5 mt-5 mt-md-0">
 					<h2>Proceso de Pruebas</h2>
+
 					<div className="d-flex justify-content-between mt-4 w-100 flex-wrap flex-md-nowrap">
-						{modules.map((mod) => (
+						{modules.map(mod => (
 							<div
 								key={mod.name}
 								className={`flex-grow-1 card m-2 p-3 text-center ${activeTab === mod.name ? 'bg-primary text-white' : ''}`}
@@ -36,10 +39,11 @@ export default function TestingProcess() {
 							</div>
 						))}
 					</div>
+
 					<div className="mt-4">
-						{modules.find((mod) => mod.name === activeTab)?.component}
+						{modules.find(mod => mod.name === activeTab)?.component}
 					</div>
-				</div>
+				</main>
 			</div>
 			<Footer />
 		</div>

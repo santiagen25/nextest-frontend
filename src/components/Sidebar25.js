@@ -18,7 +18,7 @@ export default function Sidebar25() {
 
 			{/* Sidebar móvil */}
 			<div
-				className={`bg-dark text-white vh-100 d-flex flex-column align-items-center pt-4
+				className={`padding-for-sidebar bg-dark text-white vh-100 d-flex flex-column align-items-center
 					position-absolute start-0 w-75 d-md-none sidebar-transition
 					${isOpen ? 'sidebar-visible' : 'sidebar-hidden'}
 				`}

@@ -91,7 +91,7 @@ export default function TestRepository() {
 					</button>
 				</div>
 
-				<div className="input-group w-50 mb-4">
+				<div className="input-group w-100 w-md-50 mb-4">
 					<span className="input-group-text">
 						<FaSearch />
 					</span>

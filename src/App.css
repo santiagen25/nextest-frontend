@@ -105,6 +105,11 @@ form.adaptedForm {
 	padding-top: 5em;
 }
 
+.sidebar-fullheight {
+	min-height: 100vh;
+	height: 100%;
+}
+
 
 /* --- Responsive zone --- */
 
