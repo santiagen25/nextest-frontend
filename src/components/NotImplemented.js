@@ -1,4 +1,4 @@
-import React from 'react';
+import { t } from 'i18next';
 import { usePageTitle } from '../hooks/usePageTitle';
 
 export default function NotImplemented() {
@@ -6,8 +6,8 @@ export default function NotImplemented() {
 
 	return (
 		<div style={{ padding: '2rem', textAlign: 'center' }}>
-			<h1>🚧 Sitio en construcción 🚧</h1>
-			<p>Esta pantalla aún no está implementada.</p>
+			<h1>🚧 {t('notImplemented.screenUnderConstruction')} 🚧</h1>
+			<p>{t('notImplemented.thisScreenIsNotImplemented')}</p>
 		</div>
 	);
 }

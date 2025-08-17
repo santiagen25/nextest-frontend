@@ -119,14 +119,20 @@
 		"success": "Profile updated succesfully",
 		"error": "Error updating the profile"
 	},
-	"TestingProcess": {
+	"testingProcess": {
 		"title": "Testing process"
 	},
-	"TestRepository": {
+	"testRepository": {
 		"title": "Test repository"
 	},
-	"TestPlans": {
+	"testPlans": {
 		"title": "Test plans"
+	},
+	"testExecution": {
+		"title": "Test execution"
+	},
+	"controlPanel": {
+		"title": "Control panel"
 	},
 	"TestWithSteps": {
 		"title": "Test with steps"
@@ -141,6 +147,10 @@
 		"title": "Assign Profiles",
 		"asignarTesters": "Assign Testers to the project",
 		"asignar": "Assign"
+	},
+	"notImplemented": {
+		"screenUnderConstruction": "Screen under construction",
+		"thisScreenIsNotImplemented": "This screen is not implemented yet."
 	},
 	"footer": {
 		"followUs": "Follow us"

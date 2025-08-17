@@ -119,14 +119,20 @@
 		"success": "Perfil actualizado con éxito",
 		"error": "Error al actualizar el perfil"
 	},
-	"TestingProcess": {
-		"title": "Proceso de Testing"
+	"testingProcess": {
+		"title": "Proceso de Pruebas"
 	},
-	"TestRepository": {
-		"title": "Repositorio de Test"
+	"testRepository": {
+		"title": "Repositorio de Pruebas"
 	},
-	"TestPlans": {
-		"title": "Plan de Test"
+	"testPlans": {
+		"title": "Planes de Pruebas"
+	},
+	"testExecution": {
+		"title": "Ejecución de Pruebas"
+	},
+	"controlPanel": {
+		"title": "Cuadro de Mando"
 	},
 	"TestWithSteps": {
 		"title": "Diseño de pruebas con pasos"
@@ -141,6 +147,10 @@
 		"title": "Asignar Perfiles",
 		"asignarTesters": "Asignar Testers al proyecto",
 		"asignar": "Asignar"
+	},
+	"notImplemented": {
+		"screenUnderConstruction": "Sitio en construcción",
+		"thisScreenIsNotImplemented": "Esta pantalla aún no está implementada."
 	},
 	"footer": {
 		"followUs": "Siguenos"

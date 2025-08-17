@@ -27,7 +27,7 @@ export default function SidebarTest25() {
 			</div>
 
 			{/* Sidebar escritorio */}
-			<div className="bg-dark text-white pt-4 d-flex justify-content-center	">
+			<div className="d-none d-md-flex flex-column bg-dark text-white pt-4">
 				<SidebarTestContent />
 			</div>
 		</>
