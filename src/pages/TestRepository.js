@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import { usePageTitle } from '../hooks/usePageTitle';
 import { FaSearch } from 'react-icons/fa';
+import { t } from 'i18next';
 
 export default function TestRepository() {
-	usePageTitle('Repositorio de Pruebas');
+	usePageTitle('testRepository.title');
 
 	const [folderName, setFolderName] = useState('');
 	const [search, setSearch] = useState('');
 	const [folders, setFolders] = useState([
 		{
-			name: 'Carpeta Inicial',
+			name: t('testRepository.carpetaInicial'),
 			tests: [
-				{ name: 'Prueba Login', type: 'Con Pasos' },
-				{ name: 'Prueba Exploratoria', type: 'Exploratoria' },
+				{ name: t('testRepository.pruebaLogin'), type: t('testRepository.conPasos') },
+				{ name: t('testRepository.pruebaExploratoria'), type: t('testRepository.exploratoria') },
 			],
 		},
 	]);
@@ -27,7 +28,7 @@ export default function TestRepository() {
 		if (!newName) return;
 		const exists = folders.some((f) => normalize(f.name) === normalize(newName));
 		if (exists) {
-			alert('Ya existe una carpeta con ese nombre.');
+			alert(t('testRepository.yaExisteUnaCarpetaConEseNombre'));
 			return;
 		}
 		setFolders([{ name: newName, tests: [] }, ...folders]);
@@ -36,7 +37,7 @@ export default function TestRepository() {
 
 	const handleAddTest = (folderIndex) => {
 		const testName = newTests[folderIndex]?.name?.trim();
-		const testType = newTests[folderIndex]?.type || 'Con Pasos';
+		const testType = newTests[folderIndex]?.type || t('testRepository.conPasos');
 
 		if (!testName) return;
 
@@ -45,7 +46,7 @@ export default function TestRepository() {
 		setFolders(updatedFolders);
 
 		// Limpiar solo ese input
-		setNewTests({ ...newTests, [folderIndex]: { name: '', type: 'Con Pasos' } });
+		setNewTests({ ...newTests, [folderIndex]: { name: '', type: t('testRepository.conPasos') } });
 	};
 
 	const normalizedSearch = normalize(search);
@@ -76,18 +77,18 @@ export default function TestRepository() {
 	return (
 		<div className="d-flex min-vh-100 p-5">
 			<div className="w-100">
-				<h2>Repositorio de Pruebas</h2>
+				<h2>{t('testRepository.title')}</h2>
 
 				<div className="input-group w-50 mt-4 mb-4">
 					<input
 						type="text"
 						className="form-control"
-						placeholder="Nombre de la carpeta..."
+						placeholder={t('testRepository.nombreDeLaCarpeta')}
 						value={folderName}
 						onChange={(e) => setFolderName(e.target.value)}
 					/>
 					<button className="btn btn-dark btn-sm" onClick={handleAddFolder}>
-						Añadir Carpeta
+						{t('testRepository.anadirCarpeta')}
 					</button>
 				</div>
 
@@ -97,7 +98,7 @@ export default function TestRepository() {
 					</span>
 					<input
 						type="text"
-						placeholder="Buscar prueba por nombre o tipo..."
+						placeholder={t('testRepository.buscarPruebaPorNombreOTipo')}
 						className="form-control"
 						value={search}
 						onChange={(e) => setSearch(e.target.value)}
@@ -108,14 +109,14 @@ export default function TestRepository() {
 					<div key={i} className="mb-4 border p-3 rounded">
 						<h5>{folder.name}</h5>
 						<button className="btn btn-danger btn-sm mb-2" onClick={() => handleDeleteFolder(i)}>
-							Eliminar carpeta
+							{t('testRepository.eliminarCarpeta')}
 						</button>
 
 						<div className="input-group mb-2">
 							<input
 								type="text"
 								className="form-control"
-								placeholder="Nombre de la prueba..."
+								placeholder={t('testRepository.nombreDeLaPrueba')}
 								value={newTests[i]?.name || ''}
 								onChange={(e) =>
 									setNewTests({ ...newTests, [i]: { ...newTests[i], name: e.target.value } })
@@ -124,29 +125,29 @@ export default function TestRepository() {
 							/>
 							<select
 								className="form-select"
-								value={newTests[i]?.type || 'Con Pasos'}
+								value={newTests[i]?.type || t('testRepository.conPasos')}
 								onChange={(e) =>
 									setNewTests({ ...newTests, [i]: { ...newTests[i], type: e.target.value } })
 								}
 							>
-								<option>Con Pasos</option>
-								<option>Sin Pasos</option>
-								<option>Exploratoria</option>
+								<option>{t('testRepository.conPasos')}</option>
+								<option>{t('testRepository.sinPasos')}</option>
+								<option>{t('testRepository.exploratoria')}</option>
 							</select>
 							<button
 								className="btn btn-success btn-sm"
 								onClick={() => handleAddTest(i)}
 								disabled={newTests[i]?.name.length === 0}
 							>
-								Crear Prueba
+								{t('testRepository.crearPrueba')}
 							</button>
 						</div>
 
 						<table className="table table-bordered">
 							<thead>
 								<tr>
-									<th>Nombre</th>
-									<th>Tipo</th>
+									<th>{t('testRepository.nombre')}</th>
+									<th>{t('testRepository.tipo')}</th>
 								</tr>
 							</thead>
 							<tbody>

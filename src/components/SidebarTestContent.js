@@ -1,5 +1,6 @@
 import { FaUserCheck, FaBug } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { t } from 'i18next';
 
 export default function SidebarContent() {
     return (
@@ -15,17 +16,17 @@ export default function SidebarContent() {
             {/* Tester Info Box */}
             <div className="bg-secondary rounded p-2 p-lg-3 text-center w-75 mx-auto mb-4">
                 <FaUserCheck size={32} className="mb-2" />
-                <div className="small">TESTER: Santiago Torrabadella</div>
-                <div className="small">Especialidad: Funcional</div>
-                <div className="small">Nivel: Senior</div>
-                <div className="small">Certif: ISTQB</div>
-                <div className="small">ID: T-1024</div>
+                <div className="small">{t('sidebar.tester')}: Santiago Torrabadella</div>
+                <div className="small">{t('sidebar.especialidad')}: Funcional</div>
+                <div className="small">{t('sidebar.nivel')}: Senior</div>
+                <div className="small">{t('sidebar.certificado')}: ISTQB</div>
+                <div className="small">{t('sidebar.id')}: T-1024</div>
             </div>
 
             {/* Menu Option */}
             <div className="d-flex align-items-center gap-2 w-75 p-2 bg-black mx-auto rounded">
                 <FaBug />
-                <span>Mi perfil de tester</span>
+                <span>{t('sidebar.miPerfilDeTester')}</span>
             </div>
         </>
     );

@@ -33,7 +33,41 @@
 	},
 	"dashboard": {
 		"bienvenido": "¡Bienvenido!",
-		"title": "Dashboard"
+		"title": "Dashboard",
+		"aquiPodrasVerElResumen": "Aquí podrás ver el resumen de tu Proyecto de Testing",
+		"estadoDeCasosDePrueba": "Estado de Casos de Prueba",
+		"bugsPorModulo": "Bugs por Módulo",
+		"aprobados": "Aprobados",
+		"fallidos": "Fallidos",
+		"distribucionDeBugs": "Distribución de Bugs",
+		"resumen": "Resumen",
+		"inicioDelProyecto": "Inicio del Proyecto",
+		"entregaDelProyecto": "Entrega del Proyecto",
+		"cliente": "Cliente",
+		"responsableQA": "Responsable QA",
+		"tipoDePruebas": "Tipo de Pruebas",
+		"casosDePruebaTotales": "Casos de Prueba Totales",
+		"casosDePruebaEjecutados": "Casos de Prueba Ejecutados",
+		"casosDePruebaAprobados": "Casos de Prueba Aprobados",
+		"casosDePruebaFallidos": "Casos de Prueba Fallidos",
+		"bugsAbiertos": "Bugs Abiertos",
+		"bugsCerrados": "Bugs Cerrados",
+		"ultimaEjecucion": "Última ejecución",
+		"indicadores": "Indicadores",
+		"porcentajeDeCobertura": "Porcentaje de Cobertura",
+		"productividadDelEquipoQA": "Productividad del Equipo QA",
+		"prioridadDeBugs": "Prioridad de Bugs",
+		"horasDedicadasQA": "Horas Dedicadas QA",
+		"proximosHitos": "Próximos Hitos",
+		"revisionDeRequisitos": "Revisión de Requisitos",
+		"pruebasdeRegresionFinal": "Pruebas de Regresión Final",
+		"informeFinalDeQA": "Informe Final de QA",
+		"casosDePrueba": "Casos de Prueba",
+		"login": "Login",
+		"api": "API",
+		"baseDeDatos": "Base de Datos",
+		"mobile": "Mobile",
+		"bugsEncontrados": "Bugs Encontrados"
 	},
 	"registerClient": {
 		"eresTester?": "¿Eres un Tester?",
@@ -123,10 +157,42 @@
 		"title": "Proceso de Pruebas"
 	},
 	"testRepository": {
-		"title": "Repositorio de Pruebas"
+		"title": "Repositorio de Pruebas",
+		"carpetaInicial": "Carpeta Inicial",
+		"pruebaLogin": "Prueba Login",
+		"conPasos": "Con Pasos",
+		"exploratoria": "Exploratoria",
+		"pruebaExploratoria": "Prueba Exploratoria",
+		"yaExisteUnaCarpetaConEseNombre": "Ya existe una carpeta con ese nombre.",
+		"nombreDeLaCarpeta": "Nombre de la Carpeta...",
+		"anadirCarpeta": "Añadir Carpeta",
+		"buscarPruebaPorNombreOTipo": "Buscar prueba por nombre o tipo...",
+		"eliminarCarpeta": "Eliminar Carpeta",
+		"nombreDeLaPrueba": "Nombre de la prueba...",
+		"sinPasos": "Sin Pasos",
+		"crearPrueba": "Crear Prueba",
+		"nombre": "Nombre",
+		"tipo": "Tipo"
 	},
 	"testPlans": {
-		"title": "Planes de Pruebas"
+		"title": "Planes de Pruebas",
+		"pruebaLogin": "Prueba Login",
+		"conPasos": "Con Pasos",
+		"pruebaExploratoria": "Prueba Exploratoria",
+		"exploratoria": "Exploratoria",
+		"pruebaCarga": "Prueba Carga",
+		"sinPasos": "Sin Pasos",
+		"yaExisteUnPlanConEseNombre": "Ya existe un plan con ese nombre.",
+		"estaPruebaYaEstaEnElPlan": "Esta prueba ya está en el plan.",
+		"nombreDelPlan": "Nombre del plan...",
+		"crearPlan": "Crear Plan",
+		"buscarPlanOPrueba": "Buscar plan o prueba...",
+		"eliminarPlan": "Eliminar Plan",
+		"anadirPrueba": "Añadir Prueba",
+		"nombre": "Nombre",
+		"tipo": "Tipo",
+		"acciones": "Acciones",
+		"quitar": "Quitar"
 	},
 	"testExecution": {
 		"title": "Ejecución de Pruebas"
@@ -134,13 +200,13 @@
 	"controlPanel": {
 		"title": "Cuadro de Mando"
 	},
-	"TestWithSteps": {
+	"testWithSteps": {
 		"title": "Diseño de pruebas con pasos"
 	},
-	"TestWithoutSteps": {
+	"testWithoutSteps": {
 		"title": "Diseño de pruebas sin pasos"
 	},
-	"ExploratoryTest": {
+	"exploratoryTest": {
 		"title": "Diseño de prueba exploratoria"
 	},
 	"assignProfiles": {
@@ -151,6 +217,14 @@
 	"notImplemented": {
 		"screenUnderConstruction": "Sitio en construcción",
 		"thisScreenIsNotImplemented": "Esta pantalla aún no está implementada."
+	},
+	"sidebar": {
+		"tester": "TESTER",
+		"especialidad": "Especialidad",
+		"nivel": "Nivel",
+		"certificado": "Certificado",
+		"id": "ID",
+		"miPerfilDeTester": "Mi Perfil de Tester"
 	},
 	"footer": {
 		"followUs": "Siguenos"

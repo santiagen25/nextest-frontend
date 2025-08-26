@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { usePageTitle } from '../hooks/usePageTitle';
 import { FaSearch } from 'react-icons/fa';
+import { t } from 'i18next';
 
 export default function TestPlans() {
-	usePageTitle('Planes de Prueba');
+	usePageTitle('testPlans.title');
 
 	const [planName, setPlanName] = useState('');
 	const [search, setSearch] = useState('');
 	const [plans, setPlans] = useState([]);
 	const [availableTests] = useState([
-		{ name: 'Prueba Login', type: 'Con Pasos' },
-		{ name: 'Prueba Exploratoria', type: 'Exploratoria' },
-		{ name: 'Prueba Carga', type: 'Sin Pasos' },
+		{ name: t('testPlans.pruebaLogin'), type: t('testPlans.conPasos') },
+		{ name: t('testPlans.pruebaExploratoria'), type: t('testPlans.exploratoria') },
+		{ name: t('testPlans.pruebaCarga'), type: t('testPlans.sinPasos') },
 	]);
 
 	// Cargar planes guardados al iniciar
@@ -43,8 +44,8 @@ export default function TestPlans() {
 				(plan) => normalize(plan.name) === normalize(newName)
 			);
 			if (exists) {
-				alert('Ya existe un plan con ese nombre.');
-				return prevPlans; // <-- NO SOBREESCRIBE
+				alert(t('testPlans.yaExisteUnPlanConEseNombre'));
+				return prevPlans;
 			}
 			return [{ name: newName, tests: [] }, ...prevPlans];
 		});
@@ -58,7 +59,7 @@ export default function TestPlans() {
 			(t) => normalize(t.name) === normalize(test.name)
 		);
 		if (exists) {
-			alert('Esta prueba ya está en el plan.');
+			alert(t('testPlans.estaPruebaYaEstaEnElPlan'));
 			return;
 		}
 		updatedPlans[planIndex].tests.push(test);
@@ -90,18 +91,18 @@ export default function TestPlans() {
 	return (
 		<div className="d-flex min-vh-100 p-5">
 			<div className="w-100">
-				<h2>Planes de Prueba</h2>
+				<h2>{t('testPlans.title')}</h2>
 
 				<div className="input-group w-50 mt-4 mb-4">
 					<input
 						type="text"
 						className="form-control"
-						placeholder="Nombre del plan..."
+						placeholder={t('testPlans.nombreDelPlan')}
 						value={planName}
 						onChange={(e) => setPlanName(e.target.value)}
 					/>
 					<button className="btn btn-dark btn-sm" onClick={handleAddPlan}>
-						Crear Plan
+						{t('testPlans.crearPlan')}
 					</button>
 				</div>
 
@@ -111,7 +112,7 @@ export default function TestPlans() {
 					</span>
 					<input
 						type="text"
-						placeholder="Buscar plan o prueba..."
+						placeholder={t('testPlans.buscarPlanOPrueba')}
 						className="form-control"
 						value={search}
 						onChange={(e) => setSearch(e.target.value)}
@@ -126,12 +127,12 @@ export default function TestPlans() {
 								className="btn btn-danger btn-sm"
 								onClick={() => handleDeletePlan(i)}
 							>
-								Eliminar Plan
+								{t('testPlans.eliminarPlan')}
 							</button>
 						</div>
 
 						<div className="mb-2">
-							<strong>Añadir Prueba:</strong>
+							<strong>{t('testPlans.anadirPrueba')}:</strong>
 							{availableTests.map((test, idx) => (
 								<button
 									key={idx}
@@ -146,9 +147,9 @@ export default function TestPlans() {
 						<table className="table table-bordered">
 							<thead>
 								<tr>
-									<th>Nombre</th>
-									<th>Tipo</th>
-									<th>Acciones</th>
+									<th>{t('testPlans.nombre')}</th>
+									<th>{t('testPlans.tipo')}</th>
+									<th>{t('testPlans.acciones')}</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -161,7 +162,7 @@ export default function TestPlans() {
 												className="btn btn-sm btn-danger"
 												onClick={() => handleDeleteTestFromPlan(i, j)}
 											>
-												Quitar
+												{t('testPlans.quitar')}
 											</button>
 										</td>
 									</tr>

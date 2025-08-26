@@ -33,7 +33,41 @@
 	},
 	"dashboard": {
 		"bienvenido": "Welcome!",
-		"title": "Dashboard"
+		"title": "Dashboard",
+		"aquiPodrasVerElResumen": "Here you can watch the summary of your Testing Project",
+		"estadoDeCasosDePrueba": "State of Test Cases",
+		"bugsPorModulo": "Bugs by Module",
+		"aprobados": "Succesfull",
+		"fallidos": "Failed",
+		"distribucionDeBugs": "Bug Distribution",
+		"resumen": "Summary",
+		"inicioDelProyecto": "Project Start",
+		"entregaDelProyecto": "Project Delivery",
+		"cliente": "Client",
+		"responsableQA": "QA Manager",
+		"tipoDePruebas": "Test Type",
+		"casosDePruebaTotales": "Total Test Cases",
+		"casosDePruebaEjecutados": "Executed Test Cases",
+		"casosDePruebaAprobados": "Approved Test Cases",
+		"casosDePruebaFallidos": "Failed Test Cases",
+		"bugsAbiertos": "Open Bugs",
+		"bugsCerrados": "Closed Bugs",
+		"ultimaEjecucion": "Last Execution",
+		"indicadores": "Indicators",
+		"porcentajeDeCobertura": "Coverage Percentage",
+		"productividadDelEquipoQA": "QA Team Productivity",
+		"prioridadDeBugs": "Bug Priority",
+		"horasDedicadasQA": "QA Dedicated Hours",
+		"proximosHitos": "Upcoming Milestones",
+		"revisionDeRequisitos": "Requirements Review",
+		"pruebasdeRegresionFinal": "Final Regression Tests",
+		"informeFinalDeQA": "Final QA Report",
+		"casosDePrueba": "Test Cases",
+		"login": "Login",
+		"api": "API",
+		"baseDeDatos": "Database",
+		"mobile": "Mobile",
+		"bugsEncontrados": "Bugs Found"
 	},
 	"registerClient": {
 		"eresTester?": "Are you a Tester?",
@@ -123,10 +157,42 @@
 		"title": "Testing process"
 	},
 	"testRepository": {
-		"title": "Test repository"
+		"title": "Test repository",
+		"carpetaInicial": "Initial Folder",
+		"pruebaLogin": "Login Test",
+		"conPasos": "With Steps",
+		"exploratoria": "Exploratory",
+		"pruebaExploratoria": "Exploratory Test",
+		"yaExisteUnaCarpetaConEseNombre": "A folder with that name already exists.",
+		"nombreDeLaCarpeta": "Folder Name...",
+		"anadirCarpeta": "Add Folder",
+		"buscarPruebaPorNombreOTipo": "Search test by name or type...",
+		"eliminarCarpeta": "Delete Folder",
+		"nombreDeLaPrueba": "Test Name...",
+		"sinPasos": "Without Steps",
+		"crearPrueba": "Create Test",
+		"nombre": "Name",
+		"tipo": "Type"
 	},
 	"testPlans": {
-		"title": "Test plans"
+		"title": "Test plans",
+		"pruebaLogin": "Login Test",
+		"conPasos": "With Steps",
+		"pruebaExploratoria": "Exploratory Test",
+		"exploratoria": "Exploratory",
+		"pruebaCarga": "Load Test",
+		"sinPasos": "Without Steps",
+		"yaExisteUnPlanConEseNombre": "A plan with that name already exists.",
+		"estaPruebaYaEstaEnElPlan": "This test is already in the plan.",
+		"nombreDelPlan": "Name of the plan...",
+		"crearPlan": "Create Plan",
+		"buscarPlanOPrueba": "Search plan or test...",
+		"eliminarPlan": "Delete Plan",
+		"anadirPrueba": "Add Test",
+		"nombre": "Name",
+		"tipo": "Type",
+		"acciones": "Actions",
+		"quitar": "Remove"
 	},
 	"testExecution": {
 		"title": "Test execution"
@@ -134,13 +200,13 @@
 	"controlPanel": {
 		"title": "Control panel"
 	},
-	"TestWithSteps": {
+	"testWithSteps": {
 		"title": "Test with steps"
 	},
-	"TestWithoutSteps": {
+	"testWithoutSteps": {
 		"title": "Test without steps"
 	},
-	"ExploratoryTest": {
+	"exploratoryTest": {
 		"title": "Exploratory Test"
 	},
 	"assignProfiles": {
@@ -151,6 +217,14 @@
 	"notImplemented": {
 		"screenUnderConstruction": "Screen under construction",
 		"thisScreenIsNotImplemented": "This screen is not implemented yet."
+	},
+	"sidebar": {
+		"tester": "TESTER",
+		"especialidad": "Speciality",
+		"nivel": "Level",
+		"certificado": "Certification",
+		"id": "ID",
+		"miPerfilDeTester": "My Tester Profile"
 	},
 	"footer": {
 		"followUs": "Follow us"
