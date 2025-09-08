@@ -1,0 +1,74 @@
+{
+	"cases": {
+		"approved": 68,
+		"failed": 8,
+		"untested": 3
+	},
+	"bugsByModule": [
+		{
+			"moduleKey": "login",
+			"count": 3
+		},
+		{
+			"moduleKey": "title",
+			"count": 5
+		},
+		{
+			"moduleKey": "api",
+			"count": 2
+		},
+		{
+			"moduleKey": "baseDeDatos",
+			"count": 4
+		},
+		{
+			"moduleKey": "mobile",
+			"count": 1
+		}
+	],
+	"summary": {
+		"startDate": "2025-05-21",
+		"endDate": "2025-07-24",
+		"client": "TechCorp Solutions S.A.",
+		"qaLead": "Santiago Torrabadella",
+		"typesOfTests": [
+			"Funcionales",
+			"Regresión",
+			"Integración"
+		],
+		"totals": {
+			"totalCases": 128,
+			"executed": 76,
+			"approved": 68,
+			"failed": 8
+		},
+		"bugs": {
+			"open": 5,
+			"closed": 12
+		},
+		"lastRun": "2025-06-30"
+	},
+	"indicators": {
+		"coveragePercent": 59,
+		"productivity": "Alta",
+		"bugPriority": {
+			"critical": 2,
+			"minor": 3
+		},
+		"qaHours": 240
+	},
+	"milestones": [
+		{
+			"key": "revisionDeRequisitos",
+			"date": "2025-07-05"
+		},
+		{
+			"key": "pruebasdeRegresionFinal",
+			"date": "2025-07-15"
+		},
+		{
+			"key": "informeFinalDeQA",
+			"date": "2025-07-22"
+		}
+	]
+}

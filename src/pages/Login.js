@@ -47,13 +47,18 @@ export default function Login() {
 
 		try {
 			const result = await login(objectToSend);
-			console.log('Login OK:', result);
+
+			if (!result.ok) return setError(result.message || 'No autorizado');
+
+			// 3) éxito real
+			if (!result.token) return setError('Falta token en la respuesta');
 			localStorage.setItem('token', result.token);
 			setSuccess(true);
-			navigate('/dashboard');
+			navigate('/testing-process');
 		} catch (err) {
-			setError(err.message);
+			setError(err.message || 'Error inesperado');
 		}
+
 	};
 
 	return (

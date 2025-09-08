@@ -39,6 +39,7 @@
 		"bugsPorModulo": "Bugs by Module",
 		"aprobados": "Succesfull",
 		"fallidos": "Failed",
+		"noTesteados": "Not Tested",
 		"distribucionDeBugs": "Bug Distribution",
 		"resumen": "Summary",
 		"inicioDelProyecto": "Project Start",

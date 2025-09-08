@@ -1,0 +1,15 @@
+{
+	"ok": true,
+	"token": "fake-jwt",
+	"user": {
+		"id": 1,
+		"email": "demo@nextest.io",
+		"role": "admin",
+		"name": "Santi"
+	},
+	"guards": {
+		"emailVerified": true,
+		"mfaRequired": false,
+		"passwordChangeRequired": false
+	}
+}

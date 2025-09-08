@@ -39,6 +39,7 @@
 		"bugsPorModulo": "Bugs por Módulo",
 		"aprobados": "Aprobados",
 		"fallidos": "Fallidos",
+		"noTesteados": "No Testeados",
 		"distribucionDeBugs": "Distribución de Bugs",
 		"resumen": "Resumen",
 		"inicioDelProyecto": "Inicio del Proyecto",

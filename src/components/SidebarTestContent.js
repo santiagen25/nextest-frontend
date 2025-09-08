@@ -1,8 +1,19 @@
 import { FaUserCheck, FaBug } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { t } from 'i18next';
+import { useEffect, useState } from 'react';
 
 export default function SidebarContent() {
+    const [info, setInfo] = useState(null);
+
+    useEffect(() => {
+        let ok = true;
+        fetch('/mocks/sidebar.json').then(r => r.json()).then(d => ok && setInfo(d));
+        return () => { ok = false; };
+    }, []);
+
+    const tester = info?.tester;
+
     return (
         <>
             {/* Logo */}
@@ -16,11 +27,11 @@ export default function SidebarContent() {
             {/* Tester Info Box */}
             <div className="bg-secondary rounded p-2 p-lg-3 text-center w-75 mx-auto mb-4">
                 <FaUserCheck size={32} className="mb-2" />
-                <div className="small">{t('sidebar.tester')}: Santiago Torrabadella</div>
-                <div className="small">{t('sidebar.especialidad')}: Funcional</div>
-                <div className="small">{t('sidebar.nivel')}: Senior</div>
-                <div className="small">{t('sidebar.certificado')}: ISTQB</div>
-                <div className="small">{t('sidebar.id')}: T-1024</div>
+                <div className="small">{t('sidebar.tester')}: {tester?.name ?? '-'}</div>
+                <div className="small">{t('sidebar.especialidad')}: {tester?.especialidad ?? '-'}</div>
+                <div className="small">{t('sidebar.nivel')}: {tester?.nivel ?? '-'}</div>
+                <div className="small">{t('sidebar.certificado')}: {tester?.certificado ?? '-'}</div>
+                <div className="small">{t('sidebar.id')}: {tester?.id ?? '-'}</div>
             </div>
 
             {/* Menu Option */}

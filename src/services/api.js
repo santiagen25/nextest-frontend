@@ -11,7 +11,7 @@ const getMode = () => localStorage.getItem('apiMode') || 'real';
 
 async function request({ service='funcional', method='get', url='', data, config }) {
   if (getMode() === 'mock') {
-    const base = import.meta?.env?.BASE_URL || process.env.PUBLIC_URL || '/';
+    const base = process.env.PUBLIC_URL || '/';
     const clean = (s='') => s.replace(/^\/+/, '');
     // 1ª opción: /mocks/<service>/<url>.json  (p.ej. /mocks/login/auth.json)
     const primary = `${base}mocks/${service}/${clean(url)}.json`;

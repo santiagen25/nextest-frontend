@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { usePageTitle } from '../hooks/usePageTitle';
 import { Bar, Doughnut } from 'react-chartjs-2';
@@ -27,27 +27,23 @@ export default function DashboardTest() {
 	const { t } = useTranslation();
 	usePageTitle('dashboard.title');
 
+	const [dash, setDash] = useState(null);
+	useEffect(() => {
+		let ok = true;
+		fetch('/mocks/dashboard.json').then(r => r.json()).then(d => ok && setDash(d));
+		return () => { ok = false; };
+	}, []);
+
+	const cases = dash?.cases ?? { approved: 0, failed: 0, untested: 0 };
 	const data = {
-		labels: [t('dashboard.aprobados'), t('dashboard.fallidos')],
-		datasets: [
-			{
-				label: t('dashboard.casosDePrueba'),
-				data: [68, 8],
-				backgroundColor: ['#198754', '#dc3545'],
-				borderWidth: 1,
-			},
-		],
+		labels: [t('dashboard.aprobados'), t('dashboard.fallidos'), t('dashboard.noTesteados')],
+		datasets: [{ label: t('dashboard.casosDePrueba'), data: [cases.approved, cases.failed, cases.untested], backgroundColor: ['#198754', '#dc3545', '#fd7e14'], borderWidth: 1 }]
 	};
 
+	const bugs = dash?.bugsByModule ?? [];
 	const bugsPorModulo = {
-		labels: [t('dashboard.login'), t('dashboard.title'), t('dashboard.api'), t('dashboard.baseDeDatos'), t('dashboard.mobile')],
-		datasets: [
-			{
-				label: t('dashboard.bugsEncontrados'),
-				data: [3, 5, 2, 4, 1],
-				backgroundColor: '#0d6efd',
-			},
-		],
+		labels: bugs.map(b => t(`dashboard.${b.moduleKey}`)),
+		datasets: [{ label: t('dashboard.bugsEncontrados'), data: bugs.map(b => b.count), backgroundColor: '#0d6efd' }]
 	};
 
 	return (
@@ -72,38 +68,37 @@ export default function DashboardTest() {
 					<div>
 						<h2>{t('dashboard.resumen')}</h2>
 						<ul>
-							<li>{t('dashboard.inicioDelProyecto')}: 21/05/2025</li>
-							<li>{t('dashboard.entregaDelProyecto')}: 24/07/2025</li>
-							<li>{t('dashboard.cliente')}: TechCorp Solutions S.A.</li>
-							<li>{t('dashboard.responsableQA')}: Santiago Torrabadella</li>
-							<li>{t('dashboard.tipoDePruebas')}: Funcionales, Regresión, Integración</li>
-							<li>{t('dashboard.casosDePruebaTotales')}: 128</li>
-							<li>{t('dashboard.casosDePruebaEjecutados')}: 76</li>
-							<li>{t('dashboard.casosDePruebaAprobados')}: 68</li>
-							<li>{t('dashboard.casosDePruebaFallidos')}: 8</li>
-							<li>{t('dashboard.bugsAbiertos')}: 5</li>
-							<li>{t('dashboard.bugsCerrados')}: 12</li>
-							<li>{t('dashboard.ultimaEjecucion')}: 30/06/2025</li>
+							<li>{t('dashboard.inicioDelProyecto')}: {dash?.summary?.startDate ?? '-'}</li>
+							<li>{t('dashboard.entregaDelProyecto')}: {dash?.summary?.endDate ?? '-'}</li>
+							<li>{t('dashboard.cliente')}: {dash?.summary?.client ?? '-'}</li>
+							<li>{t('dashboard.responsableQA')}: {dash?.summary?.qaLead ?? '-'}</li>
+							<li>{t('dashboard.tipoDePruebas')}: {(dash?.summary?.typesOfTests ?? []).join(', ')}</li>
+							<li>{t('dashboard.casosDePruebaTotales')}: {dash?.summary?.totals?.totalCases ?? 0}</li>
+							<li>{t('dashboard.casosDePruebaEjecutados')}: {dash?.summary?.totals?.executed ?? 0}</li>
+							<li>{t('dashboard.casosDePruebaAprobados')}: {dash?.summary?.totals?.approved ?? 0}</li>
+							<li>{t('dashboard.casosDePruebaFallidos')}: {dash?.summary?.totals?.failed ?? 0}</li>
+							<li>{t('dashboard.bugsAbiertos')}: {dash?.summary?.bugs?.open ?? 0}</li>
+							<li>{t('dashboard.bugsCerrados')}: {dash?.summary?.bugs?.closed ?? 0}</li>
+							<li>{t('dashboard.ultimaEjecucion')}: {dash?.summary?.lastRun ?? '-'}</li>
 						</ul>
 					</div>
 
 					<div>
 						<h2 className="mt-4">{t('dashboard.indicadores')}</h2>
 						<ul>
-							<li>{t('dashboard.porcentajeDeCobertura')}: 59%</li>
-							<li>{t('dashboard.productividadDelEquipoQA')}: Alta</li>
-							<li>{t('dashboard.prioridadDeBugs')}: 2 críticos, 3 menores</li>
-							<li>{t('dashboard.horasDedicadasQA')}: 240h</li>
+							<li>{t('dashboard.porcentajeDeCobertura')}: {(dash?.indicators?.coveragePercent ?? 0)}%</li>
+							<li>{t('dashboard.productividadDelEquipoQA')}: {dash?.indicators?.productivity ?? '-'}</li>
+							<li>{t('dashboard.prioridadDeBugs')}: Críticos {dash?.indicators?.bugPriority?.critical ?? 0}, Menores {dash?.indicators?.bugPriority?.minor ?? 0}</li>
+							<li>{t('dashboard.horasDedicadasQA')}: {dash?.indicators?.qaHours ?? 0}h</li>
 						</ul>
 
 						<h2 className="mt-4">{t('dashboard.proximosHitos')}</h2>
 						<ul>
-							<li>{t('dashboard.revisionDeRequisitos')}: 05/07/2025</li>
-							<li>{t('dashboard.pruebasdeRegresionFinal')}: 15/07/2025</li>
-							<li>{t('dashboard.informeFinalDeQA')}: 22/07/2025</li>
+							{(dash?.milestones ?? []).map((m, i) => (
+								<li key={i}>{t(`dashboard.${m.key}`)}: {m.date}</li>
+							))}
 						</ul>
 					</div>
-
 				</div>
 			</div>
 		</div>
