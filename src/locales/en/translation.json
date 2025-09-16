@@ -202,13 +202,40 @@
 		"title": "Control panel"
 	},
 	"testWithSteps": {
-		"title": "Test with steps"
+		"title": "Test design with steps",
+		"titulo": "Title",
+		"descripcion": "Description",
+		"tipoDePrueba": "Test Type",
+		"funcional": "Functional",
+		"rendimiento": "Performance",
+		"prioridad": "Priority",
+		"alta": "High",
+		"media": "Medium",
+		"baja": "Low",
+		"automatizada": "Automated",
+		"regresion": "Regression",
+		"planDePrueba": "Test Plan",
+		"plan": "Plan",
+		"requisito": "Requirement",
+		"sprint": "Sprint",
+		"pasos": "Steps",
+		"paso": "Step",
+		"resultadoEsperado": "Expected Result",
+		"anadirPaso": "Add Step",
+		"guardarPrueba": "Save Test",
+		"pruebaCreadaConExito": "Test successfully created",
+		"puedesEditarlaCambiandoLosCampos": "You can edit it by changing the fields above and submitting the form again."
 	},
 	"testWithoutSteps": {
-		"title": "Test without steps"
+		"title": "Test design without steps",
+		"pruebaGuardadaCorrectamente": "Test saved successfully",
+		"puedesEditarLosCampos": "You can edit the fields above and save again if you want to update it."
 	},
 	"exploratoryTest": {
-		"title": "Exploratory Test"
+		"title": "Exploratory test design",
+		"exploratoria": "Exploratory",
+		"pruebaExploratoriaGuardada": "Exploratory test saved",
+		"puedesSeguirEditando": "You can continue editing if you need to modify the data."
 	},
 	"assignProfiles": {
 		"title": "Assign Profiles",

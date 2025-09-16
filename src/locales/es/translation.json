@@ -202,13 +202,40 @@
 		"title": "Cuadro de Mando"
 	},
 	"testWithSteps": {
-		"title": "Diseño de pruebas con pasos"
+		"title": "Diseño de pruebas con pasos",
+		"titulo": "Título",
+		"descripcion": "Descripción",
+		"tipoDePrueba": "Tipo de Prueba",
+		"funcional": "Funcional",
+		"rendimiento": "Rendimineto",
+		"prioridad": "Prioridad",
+		"alta": "Alta",
+		"media": "Media",
+		"baja": "Baja",
+		"automatizada": "Automatizada",
+		"regresion": "Regresión",
+		"planDePrueba": "Plan de Prueba",
+		"plan": "Plan",
+		"requisito": "Requisito",
+		"sprint": "Sprint",
+		"pasos": "Pasos",
+		"paso": "Paso",
+		"resultadoEsperado": "Resultado esperado",
+		"anadirPaso": "Añandir Paso",
+		"guardarPrueba": "Guardar Prueba",
+		"pruebaCreadaConExito": "Prueba creada con Éxito",
+		"puedesEditarlaCambiandoLosCampos": "Puedes editarla cambiando los campos anteriores y volviendo a enviar el formulario."
 	},
 	"testWithoutSteps": {
-		"title": "Diseño de pruebas sin pasos"
+		"title": "Diseño de pruebas sin pasos",
+		"pruebaGuardadaCorrectamente": "Prueba guardada correctamente",
+		"puedesEditarLosCampos": "Puedes editar los campos anteriores y volver a guardar si quieres actualizarla."
 	},
 	"exploratoryTest": {
-		"title": "Diseño de prueba exploratoria"
+		"title": "Diseño de prueba exploratoria",
+		"exploratoria": "Exploratoria",
+		"pruebaExploratoriaGuardada": "Prueba exploratoria guardada",
+		"puedesSeguirEditando": "Puedes seguir editando si necesitas modificar los datos."
 	},
 	"assignProfiles": {
 		"title": "Asignar Perfiles",
