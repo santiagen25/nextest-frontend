@@ -14,7 +14,7 @@ const Footer = () => {
 			<div className="footer-left">
 				<p className="brand">nextest by NEXO QA</p>
 				<a href="login">{t('login.title')}</a>
-				<a href="dashboard-not">{t('dashboard.title')}</a>
+				<a href="testing-process">{t('dashboard.title')}</a>
 			</div>
 			<div className="footer-right">
 				<p>{t('footer.followUs')}:</p>
