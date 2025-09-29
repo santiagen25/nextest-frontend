@@ -79,7 +79,7 @@ export default function TestRepository() {
 			<div className="w-100">
 				<h2>{t('testRepository.title')}</h2>
 
-				<div className="input-group w-50 mt-4 mb-4">
+				<div className="input-group w-100 w-md-50 mt-4 mb-4">
 					<input
 						type="text"
 						className="form-control"

@@ -52,19 +52,19 @@ export default function DashboardTest() {
 				<h1>{t('dashboard.bienvenido')}</h1>
 				<p>{t('dashboard.aquiPodrasVerElResumen')}</p>
 
-				<div className="d-flex justify-content-between">
-					<div style={{ minWidth: '25vw', maxWidth: '30vw', marginTop: '2rem' }}>
+				<div className="d-flex flex-column flex-md-row justify-content-between">
+					<div className="w-100 w-md-25 mt-4">
 						<h2>{t('dashboard.estadoDeCasosDePrueba')}</h2>
 						<Doughnut data={data} />
 					</div>
 
-					<div style={{ minWidth: '30vw', maxWidth: '40vw', marginTop: '2rem' }}>
+					<div className="w-100 w-md-40 mt-4">
 						<h2>{t('dashboard.bugsPorModulo')}</h2>
 						<Bar data={bugsPorModulo} options={{ responsive: true, plugins: { legend: { position: 'top' }, title: { display: true, text: t('dashboard.distribucionDeBugs') } } }} />
 					</div>
 				</div>
 
-				<div className="d-flex justify-content-between" style={{ marginTop: '8rem' }}>
+				<div className="d-flex flex-column flex-md-row justify-content-between" style={{ marginTop: '8rem' }}>
 					<div>
 						<h2>{t('dashboard.resumen')}</h2>
 						<ul>

@@ -93,7 +93,7 @@ export default function TestPlans() {
 			<div className="w-100">
 				<h2>{t('testPlans.title')}</h2>
 
-				<div className="input-group w-50 mt-4 mb-4">
+				<div className="input-group w-100 w-md-50 mt-4 mb-4">
 					<input
 						type="text"
 						className="form-control"
@@ -106,7 +106,7 @@ export default function TestPlans() {
 					</button>
 				</div>
 
-				<div className="input-group w-50 mb-4">
+				<div className="input-group w-100 w-md-50 mb-4">
 					<span className="input-group-text">
 						<FaSearch />
 					</span>

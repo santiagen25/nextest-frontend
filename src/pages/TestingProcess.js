@@ -25,8 +25,8 @@ export default function TestingProcess() {
 				<div className="bg-dark">
 					<SidebarTest25 />
 				</div>
-				<main className="flex-grow-1 p-5 mt-5 mt-md-0">
-					<h2>{t('testingProcess.title')}</h2>
+				<main className="flex-grow-1 p-0 pt-5 p-md-5 mt-5 mt-md-0">
+					<h2 className="text-md-left text-center">{t('testingProcess.title')}</h2>
 
 					<div className="d-flex justify-content-between mt-4 w-100 flex-wrap flex-md-nowrap">
 						{modules.map(mod => (

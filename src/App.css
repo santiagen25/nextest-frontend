@@ -143,6 +143,12 @@ form.adaptedForm {
 	}
 }
 
+@media (min-width:768px) {
+	.input-group.w-md-50 {
+		width: 50% !important;
+	}
+}
+
 @media (min-width: 1024px) {
 	.container {
 		max-width: 800px;

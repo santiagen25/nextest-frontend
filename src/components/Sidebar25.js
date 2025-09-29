@@ -10,7 +10,7 @@ export default function Sidebar25() {
 		<>
 			{/* Botón hamburguesa para móviles */}
 			<button
-				className="btn btn-dark d-md-none position-absolute m-2"
+				className="btn btn-dark d-md-none position-fixed m-2"
 				style={{ zIndex: 1100, width: 'auto' }}
 				onClick={toggleSidebar}>
 				<FaBars />
@@ -19,7 +19,7 @@ export default function Sidebar25() {
 			{/* Sidebar móvil */}
 			<div
 				className={`padding-for-sidebar bg-dark text-white vh-100 d-flex flex-column align-items-center
-					position-absolute start-0 w-75 d-md-none sidebar-transition
+					position-fixed start-0 w-75 d-md-none sidebar-transition
 					${isOpen ? 'sidebar-visible' : 'sidebar-hidden'}
 				`}
 				style={{ zIndex: 1000 }}>
