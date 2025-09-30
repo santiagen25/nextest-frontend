@@ -147,6 +147,12 @@ form.adaptedForm {
 	.input-group.w-md-50 {
 		width: 50% !important;
 	}
+	.graphs_width_1 {
+		max-Width: 30vh;
+	}
+	.graphs_width_2 {
+		max-Width: 40vh;
+	}
 }
 
 @media (min-width: 1024px) {

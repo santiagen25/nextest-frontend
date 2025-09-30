@@ -53,12 +53,12 @@ export default function DashboardTest() {
 				<p>{t('dashboard.aquiPodrasVerElResumen')}</p>
 
 				<div className="d-flex flex-column flex-md-row justify-content-between">
-					<div style={{ minWidth: '25vw', maxWidth: '30vw'}} className="w-100 w-md-25 mt-4">
+					<div style={{ minWidth: '25vw'}} className="graphs_width_1 w-100 w-md-25 mt-4">
 						<h2>{t('dashboard.estadoDeCasosDePrueba')}</h2>
 						<Doughnut data={data} />
 					</div>
 
-					<div style={{ minWidth: '30vw', maxWidth: '40vw' }} className="w-100 w-md-40 mt-4">
+					<div style={{ minWidth: '30vw'}} className="graphs_width_2 w-100 w-md-40 mt-4">
 						<h2>{t('dashboard.bugsPorModulo')}</h2>
 						<Bar data={bugsPorModulo} options={{ responsive: true, plugins: { legend: { position: 'top' }, title: { display: true, text: t('dashboard.distribucionDeBugs') } } }} />
 					</div>
